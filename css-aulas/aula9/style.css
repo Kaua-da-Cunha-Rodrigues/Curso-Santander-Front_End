@@ -10,7 +10,7 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
 }
-.content{
+.content{ /*Defino a main e aside com nomes e descrevo os espaços que eles ocupam em um conceiro de layuot X e Y*/
     display: grid;
     grid-template-areas: 
     ". . . . ."
