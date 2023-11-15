@@ -1,0 +1,18 @@
+.box{
+    background-color: darkblue;
+    border: 5px solid darkred;
+    color: white;
+    text-align: center;
+}
+.boxes{
+    height: calc(100vh);
+    position: relative;
+
+    display: grid;
+    justify-content: flex-start;
+    gap: 5px 10px;
+
+    /* grid-template-columns: 3fr 1fr 1fr 1fr; */
+    grid-template-columns: 3fr repeat(3, 1fr); /*Agrupa três unidades por coluna, todas com mesmo tamanho*/
+    grid-template-rows: 2fr;
+}
