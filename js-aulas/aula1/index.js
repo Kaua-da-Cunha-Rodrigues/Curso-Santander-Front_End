@@ -1,0 +1,1 @@
+console.log("Hello, world") //Só fiz pq é um ritual de passagem
