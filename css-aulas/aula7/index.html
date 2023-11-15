@@ -9,36 +9,38 @@
 <body>
     <div class="bg"></div>
     <h1>CSS</h1>    
-    <table>
+    <table id="companies-table">
         <thead>
-            <tr c>
+            <tr> 
                 <th>Empresa</th>
                 <th>Contato</th>
                 <th>País</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr data-company="CO"> <!--o data- deixa vc selecionar qualquer nome que seja permitido, no caso é "company"-->
                 <td>Global</td>
                 <td>Julia Lagos</td>
                 <td>Chile</td>
             </tr>
-            <tr>
+            <tr data-company="CCL">
                 <td>Centro Comercial Laguna</td>
                 <td>Jennifer Rios</td>
                 <td>Brasil</td>
             </tr>
-            <tr>
+            <tr data-company="CEC">
                 <td>CE & C</td>
                 <td>Roberto Carlos</td>
                 <td>Brasil</td>
             </tr>
-            <tr>
+            <tr data-company="TT">
                 <td>Top Tech</td>
                 <td>João Cardoso</td>
                 <td>Portugal</td>
             </tr>
         </tbody>
     </table>
+    <button class="botao" data-button="um">Clique Aqui</button>
+    <button class="botao" data-button="dois">Alerta</button>
 </body>
 </html>
