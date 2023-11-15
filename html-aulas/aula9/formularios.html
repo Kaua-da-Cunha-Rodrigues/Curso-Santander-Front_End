@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <main>
+        <h1>Formulário</h1>
+        <hr>
+        <br>
+        <!--label é relacionado ao id, o name é pra uso em js-->
+        <form action="" method="post">
+            <div>
+                <label for="texto">Input texto</label>
+                <input type="text" name="nome" id="texto" placeholder="Informe seu nome...">
+            </div>
+            <br>
+            <div>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha">
+            </div>
+            <br>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email">
+            </div>
+            <br>
+            <div>
+                <label for="data">Data de Nascimento</label>
+                <input type="data" name="data">
+            </div>
+            <br>
+            <div>
+                <label for="numero">Número</label>
+                <input type="number" name="numero">
+            </div>
+            <br>
+            <div>
+                <label for="arquivo">Arquivo</label>
+                <input type="file" name="arquivo">
+            </div>
+            <br>
+            <div>
+                <label for="url">URL</label>
+                <input type="url" name="url">
+            </div>
+            <br>
+            <div>
+                <label for="cor">Cor</label>
+                <input type="color" name="cor">
+            </div>
+            <br>
+            <div>
+                <label for="barrinha">Barra</label>
+                <input type="range" name="barrinha">
+            </div>
+            <br>
+            <div>
+                <label for="Checkbox">Checkbox</label>
+                <input type="checkbox" name="Checkbox">
+
+                <label for="Checkbox2">Checkbox 2</label>
+                <input type="checkbox" name="Checkbox2">
+            </div>
+            <br>
+            <div>
+                <label for="radio">Radio</label>
+                <input type="radio" name="radio">
+
+                <label for="radio2">Radio 2</label>
+                <input type="radio" name="radio">
+            </div>
+            <br>
+            <div>
+                <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+            </div>
+            <br>  
+            <div>
+                <select name="select" id="select">
+                    <option value="" disabled selected>------</option>
+                    <option value="receita">Receita</option>    
+                    <option value="despesa">Despesa</option>    
+                    <option value="transferencia">transferencia</option>    
+                       
+                </select>
+            </div>
+            <br>  
+            <div>
+                <input type="reset" value="Resetar">
+                <input type="submit" value="Enviar">
+            </div>
+            <br>  
+        </form>
+    </main>   
+</body>
+</html>

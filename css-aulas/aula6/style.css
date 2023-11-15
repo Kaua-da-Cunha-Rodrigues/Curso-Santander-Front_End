@@ -1,0 +1,31 @@
+.boxes{
+    display: flex;
+    flex-direction: row; /*Por linha é o padrão*/
+    flex-wrap: wrap; /*Faz a quebra de linha dos elementos*/
+    justify-content: center; /*Ele pega o eixo principal (no caso linha) e centraliza*/
+}
+.box{
+    position: relative;
+    width: 100px;
+    margin: 10px;
+    padding: 5px;
+    background-color: darkblue;
+    border: 5px solid darkred;
+    color: white;
+    text-align: center;
+    order: 10; /*Define ordem dos elementos*/
+    flex-basis: 28%; /*Permite apenas 3 elementos por linha*/
+
+    display: flex; /*torna os elementos dentro da box em flex*/
+    flex-direction: column;
+    justify-content: center; /*Centraliza no eixo Y*/    
+}
+.box:nth-child(1){
+    order: 1;
+}
+.box:nth-child(2){
+    order: 2;
+}
+.box:nth-child(5){
+    order: 3; /*peguei o elemento 5 e coloquei em terceiro*/
+}

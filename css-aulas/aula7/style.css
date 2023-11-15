@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 2.4rem;
+}
+:root{
+    font-size: 62.5%;
+}
+h1{
+    color: blue; 
+    font-size: 96px; 
+    font-size: 9.6rem; /*Divide por 10 o de cima emultiplica com o 62.5%*/
+    font-weight: 900;
+    font-style: oblique;
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+table{
+    font-size: 2.4rem;
+    border-collapse: collapse;
+}
+table th{
+    background-color: steelblue;
+    color: white;
+}
+table tr:nth-child(2n + 1){ /*muda a cor da linha da tabela (uma sim uma não*/
+    background-color: #AAA;
+}
+table, td, th{
+    padding: 5px;
+    border: 1px solid black;
+}
+.bg{
+    width: 98vw;
+    height: 80vh;
+    background-color: #333;
+    background-image: url("https://images.unsplash.com/photo-1682687220509-61b8a906ca19?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /*Efeito parallax*/
+}
