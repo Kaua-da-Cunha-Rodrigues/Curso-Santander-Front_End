@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>arrays</h1>  
+    
+    <script>
+        let nomess = new Array(5)
+
+        nomes.fill("ada")
+
+        console.table(nomes)
+
+        nomes.push("tech")
+
+        console.table(nomes)
+
+        let numeros = [1,2,3,4,5]
+
+        numeros.indexOf(5) //procura o índice do valor 5
+
+        numeros.indexOf(8) //como não tem 8, volta -1
+
+        let numeros2 = [1,2,2,3,3,5,6,7]
+
+        numeros2.indexOf(2) //retorna o primeiro achado 
+        numeros.lastIndexOf(2) //retorna o último achado
+
+        numeros.includes(2) //se tiver, retorna true, senão false
+        numeros.find(a => a == 3) // recebe uma função para procurar um valor
+
+        numeros.filter(a => a == 2) //retorna um array com todos os valores achados
+
+        numeros.pop() //retira o último elemento
+        numeros.shift() //tira o primeiro
+
+        numeros.reverse() //autoexplicativo
+
+        novoArray = numeros.concat(numeros2) //junta os dois em outro array que pode ser atribuído
+
+        numeros.splice(0, 2) //a partir do índice 0, remove dois valores
+
+        numeros.splice(2, 0, 6, 7) //a partir do índice 2, n tira nenhum e adiciona o 6 e 7
+
+        numeros.splice(2, 3, "a", "b", "c") //a partir do índice 2, substitui três elementos por a, b, c
+
+        numeros.sort() //coloca em odem crescente
+        numeros.sort((a,b) => b -a) //ordem decrescente
+        numeros.sort().reverse() //mesma coisa de cima
+
+        let teste = [...numeros] //cria uma cópia de numeros
+
+    </script>
+</body>
+</html>

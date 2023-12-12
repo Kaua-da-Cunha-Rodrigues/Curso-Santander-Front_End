@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Página</h1>
+    <p>JS é fracamente tipada, quer dizer que a variável não precisa receber um tipo específico de dado. Uma variável "nome" por exemplo pode receber inicialmente string, mas ser mudado para number sem mudar seu tipo</p>
+
+    <h2>Tipos de Variáveis</h2>
+    <ul>
+        <li>string</li>
+        <li>
+            number - int, float, infinity, -infinity, NaN 'not a number'
+        </li>
+        <li>boolean - true ou false</li>
+        <li>
+            undefined - o js não consegue definir seu tipo
+        </li>
+        <li>null - variável vazia</li>
+        <li>object - arrays, matrizes, etc...</li>
+    </ul>
+
+    <h2>Declarando variáveis</h2>
+    <ul>
+        <li>var - variável escopo global, pode ser usada antes de sua declaração no código</li>
+        <li>let - variável escopo local</li>
+        <li>
+            const - constante, não pode ser alterado, escopo local. O const pode ser alterado quando, por exemplo, a constante for um array. Pq o que é constante é a referência da variável, não seu conteúdo
+        </li>
+    </ul>
+
+    <h2>Funções Nativas</h2>
+    <ul>
+        <li>console</li>
+        <ul>
+            <li>console.log()</li>
+            <li>console.error()</li>
+            <li>console.warm() - alerta</li>
+            <li>
+                console.table() - funciona melhor com arrays
+            </li>
+            <li>console.clear()</li>
+        </ul>
+
+        <li>parseFloat - transforma string em number</li>
+        <li>parseInt - transforma string em inteiro</li>
+        <li>Prompts e inputs sempre retornam string, então se for para realizar um cálculo, deve-se converter para um number</li>
+
+        <li>Math</li>
+        <ul>
+            <li>
+                Math.floor(variável) - arredonda pra baixo
+            </li>
+            <li>Math.round(variável)</li>
+            <li>Math.ceil(variável) - arreronda pra cima</li>
+        </ul>
+    </ul>
+
+    <h2>Operadores Aritiméticos</h2>
+    <ul>
+        <li>+ : mais</li>
+        <li>- : menos</li>
+        <li>* : multiplica</li>
+        <li>/ : divide</li>
+        <li>% : resto de</li>
+    </ul>
+    <script>
+        console.log("oi")
+        let nome = "Kauã"
+        typeof(nome) //Verifica o tipo de variável
+    </script>   
+</body>
+</html>
