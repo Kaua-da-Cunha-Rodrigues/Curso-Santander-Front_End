@@ -1,1 +1,1 @@
-chave.vendas
+console.log(resultado)

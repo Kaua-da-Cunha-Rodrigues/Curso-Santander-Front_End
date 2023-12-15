@@ -1,0 +1,26 @@
+1. Cálculo de Produto em Loop While
+
+Qual é o valor final da variável 'produto' após a execução do seguinte loop 'while' em JavaScript?
+
+let produto = 1;
+let fator = 3;
+
+while (fator <= 10) {
+  produto *= fator;
+  fator += 2;
+}
+Escolha a opção correta:
+
+a) 90
+
+b) 105 
+
+c) 945
+
+d) 60
+
+e) 120
+
+Resposta: (C)
+
+Justificativa: O código nos fornece dois elementos: o produto e o fator. Dentro do laço de repetição, ele multiplica o valor do produto(1) pelo fator(3) e, como o fator incrementa +2 (igualando 5) e repete esse processo até o elemento fator ser menor igual a 10, o resultado fica: 1 * 3 = 3 * 5 = 15 * 7 = 105 * 9 = 945.

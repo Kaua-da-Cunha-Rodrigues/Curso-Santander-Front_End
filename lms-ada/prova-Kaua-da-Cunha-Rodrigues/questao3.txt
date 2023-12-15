@@ -1,0 +1,25 @@
+3. Filtrando Strings por Tamanho Mínimo
+Considere a seguinte função filtrarStringsCurtas em JavaScript:
+
+function filtrarStringsCurtas(strings, tamanhoMinimo) {
+    return strings.filter(string => string.length >= tamanhoMinimo);
+}
+Dado o uso da função com o seguinte array e tamanho mínimo:
+
+const palavras = ["sol", "lua", "estrela", "planeta", "galáxia"];
+const resultado = filtrarStringsCurtas(palavras, 5);
+Qual será o resultado impresso no console? Escolha a opção correta:
+
+a) ["sol", "lua", "estrela"]
+
+b) ["estrela", "planeta"]
+
+c) ["estrela", "planeta", "galáxia"]
+
+d) ["sol", "lua", "galáxia"]
+
+e) ["lua", "estrela", "planeta"]
+
+Resposta: (C)
+
+Justificativa: a função "filtrarStringsCurtas" tem o objetivo de filtrar as strings que possuem um tamanho mínimo exigido pelo usuário através do parâmetro "tamanhoMinimo". Ao chamar a função, os parâmetros utilizados foram a lista de palavras e o número mínimo de letras que cada palavra deveria ter para ser selecionada para um resultado. Como o tamanhoMinimo recebeu 5, somente as palavras que possuem 5 ou mais letras foram armazenadas em "resultado" (No caso foi: "estrela", "planeta" e "galáxia")
