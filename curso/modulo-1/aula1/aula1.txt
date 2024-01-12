@@ -1,0 +1,5 @@
+Porque algumas páginas tem nomes de classes estranhas? Minifier
+	Ele reduz o tamanho do nome para melhorar performance
+
+TAGS INLINE: os elementos ficam agrupados na mesma linha
+TAGS INBLOCK: os elementos cobrem todo um bloco da página, a linha toda
