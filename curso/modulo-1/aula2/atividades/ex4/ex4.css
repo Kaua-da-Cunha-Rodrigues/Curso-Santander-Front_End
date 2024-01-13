@@ -1,0 +1,95 @@
+@font-face{
+    font-family: 'Avengers';
+    src: url('../ex4/fonts/avengeance-font/Avengeance-E1zj.otf');
+    font-weight: "normal";
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --cor0 : #e23636;
+    --cor1: #000000;
+    --cor2: #504a4a;
+    --cor3: #518caa;
+    --cor4: #f78f3f;
+
+    --font-titulo: "Avengers"
+}
+body{
+    width: 980px;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor2);
+    color: white;
+}
+h1, p, h2, table{
+    text-align: center;
+}
+h1, h2{
+    margin: 10px;
+    letter-spacing: 5px;
+}
+h1{
+    font-family: var(--font-titulo);
+    font-size: 5em;
+    color: #000000;
+}
+h2{
+    font-family: 'Marvel', sans-serif;
+    font-size: 2em;
+    color: var(--cor4);
+}
+p{
+    margin: 10px;
+}
+div.lista{
+    border: 1px solid black;
+    border-radius: 5px; 
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+ol{
+    margin: 15px;
+}
+table{
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table th, td{
+    padding: 5px;
+}
+table th{
+    font-weight: bold;
+    color: black;
+}
+table th:first-child{
+    background-color: grey;
+}
+table th{
+    background-color: var(--cor3);
+}
+table td:nth-child(2){
+    font-weight: bold;
+    background-color: var(--cor4);
+    color: black;
+}
+
+table #filme1{
+    background-color: purple;
+}
+table #filme2{
+    background-color: #000000;
+}
+table #filme3{
+    background-color: #ff2800;
+}
+table #filme4{
+    background-color: #122a46;
+}
+table #filme5{
+    background-color: #17dbcc;
+}
