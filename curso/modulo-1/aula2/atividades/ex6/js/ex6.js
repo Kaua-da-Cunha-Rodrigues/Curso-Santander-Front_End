@@ -8,20 +8,6 @@
     4- Repetir o processo para todos os botões
 */
 
-// let botao_pai = document.getElementById("botao_pai")
-// let pratos_pai = document.querySelectorAll(".pratos_pai").value
-
-
-// console.log(pratos_pai)
-
-// botao_pai.addEventListener("click", () => {
-//     if(valorDisplay == "none"){
-//         pratos_pai.setAttribute("display", "block")
-//     }else{
-//         pratos_pai.setAttribute("display", "none")
-//     }
-// })
-
 let botoes = document.querySelectorAll(".botao") //Pego os botões
 
 //para cada botao ele adiciona um evento de click e coleta o indice desse botao
