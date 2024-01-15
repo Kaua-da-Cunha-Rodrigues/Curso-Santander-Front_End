@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --cor_pai: #DB3E3A;
+    --cor_mae: #218CD9;
+    --cor_filho: #59593A;
+    --cor_filha: #DB9834;
+
+    --fonte_destaque: "Poppins", sans-serif;
+}
+html{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #1E0200;
+    line-height: 1.5em;
+}
+body{
+    font-size: 0.9em;
+}
+header{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    background-color: #F5B458;
+    text-align: center;
+}
+nav{
+    padding: 10px;
+    background-color: #F56358;
+    text-align: center;
+}
+nav a{
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+main{
+    max-width: 1080px;
+    padding: 25px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 20px;
+}
+main h2, h3{
+    font-family: 'Poppins', sans-serif;
+}
+main h2, h3, p{
+    margin: 20px;
+}
+main h3{
+    color: darkblue;
+}
+main ol, ul{
+    max-width: 80%;
+    margin: auto;
+}
+main .lista_mercado ul{
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    columns: 4;
+}
+main .lista_mercado ul, main .lista_tarefas .tarefas{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+main .cardapio_semanal table{
+    max-width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+main .cardapio_semanal ul.cores{
+    font-family: var(--fonte_destaque);
+    max-width: 400px;
+    columns: 4;
+    margin: 20px auto;
+    list-style-type: none;
+}
+main .cardapio_semanal ul.cores li{
+    padding: 5px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+main .cardapio_semanal ul li.cardapio_pai{
+    background-color: var(--cor_pai);
+    
+}
+main .cardapio_semanal ul li.cardapio_mae{
+    background-color: var(--cor_mae);
+}
+main .cardapio_semanal ul li.cardapio_filho{
+    background-color: var(--cor_filho);
+}
+main .cardapio_semanal ul li.cardapio_filha{
+    background-color: var(--cor_filha);
+}
+main .cardapio_semanal > ul li{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main .cardapio_semanal table{
+    margin: auto;
+}
+main .cardapio_semanal p{
+    font-family: var(--fonte_destaque);
+    text-align: center;
+    font-size: 1.5em;
+}
+main .cardapio_semanal table th:nth-child(1){
+    background-color: lightslategray;
+    color: white;
+}
+main .cardapio_semanal table th{
+    background-color: lightgray;
+    font-family: var(--fonte_destaque);
+}
+main .cardapio_semanal table th#ponto_vazio{
+    background-color: white;
+}
+main .cardapio_semanal table td li{
+    display: none;
+} /*Uso pro js*/
+main .cardapio_semanal table th{
+    padding: 20px;
+}
+main .cardapio_semanal table td{
+    padding: 10px;
+}
+main .cardapio_semanal table ul li.pratos_pai, .tarefas_pai{
+    color: var(--cor_pai);
+}
+main .cardapio_semanal table ul li.pratos_mae, .tarefas_mae{
+    color: var(--cor_mae);
+}
+main .cardapio_semanal table ul li.pratos_filho, .tarefas_filho{
+    color: var(--cor_filho);
+}
+main .cardapio_semanal table ul li.pratos_filha, .tarefas_filha{
+    color: var(--cor_filha);
+}
+
+main .lista_tarefas .tarefas{
+    display: flex;
+    max-width: 80%;
+    margin: auto;     
+}
+main .lista_tarefas ul{
+    max-width: 100%;
+    margin: 20px auto;
+}
+main .lista_tarefas ul > li{
+    font-family: var(--fonte_destaque);
+}
+
+
+
+

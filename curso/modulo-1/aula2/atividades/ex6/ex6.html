@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ex6.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <title>Organização Familiar</title>
+</head>
+<body>
+    <header>
+        <h1>Atividade Avaliativa - Organização Familiar</h1>
+    </header>
+    <nav>
+        <a href="#atividade">Tarefa</a>
+        <a href="#lista_mercado">Supermercado</a>
+        <a href="#cardapio_semanal">Cardápio</a>
+        <a href="#lista_tarefas">Tarefas</a>
+    </nav>
+    <main>
+        <section class="atividade" id="atividade">
+            <article class="tarefa">
+                <h2>Tarefa</h2>
+                <p>
+                    Imagine que você é responsável por organizar a rotina semanal de uma família. Sua tarefa é criar uma lista de compras e uma lista de afazeres para a próxima semana. A família é composta por quatro pessoas: pai, mãe, filho adolescente e filha de 10 anos. Cada membro da família tem suas próprias preferências alimentares e necessidades de afazeres.
+                    Considerando o desafio de organizar a rotina, vamos criar uma página para visualizar as  informações da sua organização da rotina da familia.
+                </p>
+                <p>Aqui estão algumas informações sobre eles:</p>
+                
+                <ul>
+                    <li>O pai é vegetariano e gosta de cozinhar pratos saudáveis. Ele também pratica esportes e precisa de alimentos ricos em proteínas;</li>
+                    <li>A mãe é alérgica a nozes e frutos do mar, mas gosta de comida picante;</li>
+                    <li>O filho adolescente está em uma fase de crescimento e precisa de lanches saudáveis para levar para a escola;</li>
+                    <li>A filha de 10 anos adora comida italiana e está aprendendo a tocar piano.</li>
+                </ul>
+            </article>
+            
+            <article class="requisitos">
+                <h3>Requisitos:</h3>
+                
+                <ol>
+                    <li>Para facilitar a visualização, utilize cores diferentes para cada membro da família. Use esse padrão nas listas e no cardápio;</li>
+                    <li>Liste os itens de supermercado necessários para satisfazer as necessidades alimentares de todos os membros da família durante a semana;</li>
+                    <li>Crie um cardápio semanal que inclua pratos que agradem a todos e leve em consideração as preferências alimentares e atividades de cada um;</li>
+                    <li>Elabore uma lista, conforme o modelo abaixo, de afazeres para a semana, distribuindo tarefas como cozinhar, fazer compras, levar o filho à escola, praticar esportes, ajudar a filha com as aulas de piano, etc.</li>
+                </ol>
+            </article>
+        </section>
+        <section class="solucao">
+            <article class="lista_mercado" id="lista_tarefas">
+                <h2>Supermercado</h2>
+
+                <ul>
+                        <li>Aveia</li>
+                        <li>Arroz</li>
+                        <li>Espinafre</li>
+                        <li>Brócolis</li>
+                        <li>Azeite de Oliva</li>
+                        <li>Feijão</li>
+                        <li>Frutas Diversas</li>
+                        <li>Pão Integral</li>
+                        <li>Quinoa</li>
+                        <li>Tofu</li>
+                        <li>Lentilhas</li>
+                        <li>Amêndoas</li>
+                        <li>Sementes de Chia</li>
+                        <li>Leite de Soja</li>
+                        <li>Azeite de Oliva</li>
+                        <li>Alho</li>
+                        <li>Massa de Trigo Integral</li>
+                        <li>Ovos</li>
+                        <li>Iogurte</li>
+                        <li>Leite Integral</li>
+                        <li>Tomate</li>
+                        <li>Peito de Frango</li>
+                        <li>Carne de Porco</li>
+                        <li>Feijão</li>
+                        <li>Queijo</li>
+                        <li>Chá de Gengibre</li>
+                        <li>Tapioca</li>
+                        <li>Água</li>
+                </ul>
+            </article>
+
+            <article class="cardapio_semanal" id="cardapio_semanal">
+                <h3>Cardápio Semanal</h3>
+
+                <p>Experimente clicar em um dos botões abaixo!</p>
+                <ul class="cores">
+                    <li class="cardapio_pai botao">
+                        Pai
+                    </li>
+                    <li class="cardapio_mae botao">
+                        Mãe
+                    </li>
+                    <li class="cardapio_filho botao">
+                        Filho
+                    </li>
+                    <li class="cardapio_filha botao">
+                        Filha
+                    </li>
+                </ul>
+                <table border="1px">
+                    <thead>
+                        <tr>
+                            <th id="ponto_vazio"></th>
+                            <th>Segunda</th>
+                            <th>Terça</th>
+                            <th>Quarta</th>
+                            <th>Quinta</th>
+                            <th>Sexta</th>
+                            <th>Sábado</th>
+                            <th>Domingo</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr> <!--Café da Manhã-->
+                            <th>Café da Manhã</th>
+                            <td> <!--Segunda-->
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Mingau de aveia com banana e sementes de abóbora
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Omelete com vegetais e queijo.    
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Tapioca recheada com banana e queijo branco.
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Tofu Scramble com Vegetais
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td> <!--Terça-->
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Pão Integral com tofu   
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Smoothie de maçã, banana e uma pitada de pimenta caiena        
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Pão de Queijo Integral com Queijo Branco   
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Omelete Italiano   
+                                    </li>
+                                </ul>
+                            </td> 
+
+                            <td> <!--Quarta-->
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Mingau de aveia com banana e sementes de abóbora
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Omelete com vegetais e queijo.    
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Tapioca recheada com banana e queijo branco.
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Tofu Scramble com Vegetais
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td><!--Quinta-->
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Pão Integral com tofu   
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Smoothie de maçã, banana e uma pitada de pimenta caiena        
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Pão de Queijo Integral com Queijo Branco   
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Omelete Italiano   
+                                    </li>
+                                </ul>
+                            </td> 
+                            <td> <!--Sexta-->
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Mingau de aveia com banana e sementes de abóbora
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Omelete com vegetais e queijo.    
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Tapioca recheada com banana e queijo branco.
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Tofu Scramble com Vegetais
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td colspan="2">
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Omelete de tofu com espinafre e tomate, temperado com alho e páprica.      
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Smoothie de frutas com iogurte e um toque de mel      
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Banana com Aveia
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Overnight Oats Italiano
+                                    </li>
+                                </ul>
+                            </td> <!--Sábado e Domingo-->
+                        </tr>
+
+                        <tr> <!--Almoço-->
+                            <th rowspan="2">Almoço</th>
+
+                            <td> <!--Segunda-->
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Risoto de cogumelos com arroz integral
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Arroz integral com peito de frango ao curry            
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Feijoada Light com Arroz Integral e Couve Refogada       
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Massa Integral com Molho de Tomate e Frango      
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td> <!--Terça-->
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Salada de quinoa com legumes assados e tofu grelhado    
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Wrap de carne magra com vegetais e molho picante            
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Frango Grelhado com Quinoa e Salada de Tomate e Abacate       
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Risoto de Lentilhas      
+                                    </li>
+                                </ul>    
+                            </td>
+
+                            <td> <!--Quarta-->
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Risoto de cogumelos com arroz integral
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Arroz integral com peito de frango ao curry            
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Feijoada Light com Arroz Integral e Couve Refogada       
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Massa Integral com Molho de Tomate e Frango      
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td> <!--Quinta-->
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Salada de quinoa com legumes assados e tofu grelhado    
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Wrap de carne magra com vegetais e molho picante            
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Frango Grelhado com Quinoa e Salada de Tomate e Abacate       
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Risoto de Lentilhas      
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td> <!--Sexta-->
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Risoto de cogumelos com arroz integral
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Arroz integral com peito de frango ao curry            
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Feijoada Light com Arroz Integral e Couve Refogada       
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Massa Integral com Molho de Tomate e Frango      
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td> <!--Sábado-->
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Wrap de grão-de-bico com vegetais e molho de tahine   
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Salada de frango grelhado com abacate, tomate e vegetais diversos            
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Arroz Integral com Feijão, Frango Grelhado e Salada de Tomate e Couve       
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Salada de Feijão Branco com Tomate e Manjericão      
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td> <!--Domingo-->
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Wrap de grão-de-bico com vegetais e molho de tahine   
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Salada de frango grelhado com abacate, tomate e vegetais diversos            
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Arroz Integral com Feijão, Frango Grelhado e Salada de Tomate e Couve       
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Salada de Feijão Branco com Tomate e Manjericão       
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr> <!--Almoço - Sobremesa-->
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Banana Assada com Canela    
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Mousse de Chocolate           
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Mousse de Maracujá       
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Pudim de Chia com Manga    
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Trufas de Tâmaras e Cacau        
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Sorvete de Frutas             
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Salada de Frutas com Iogurte e Granola          
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Arroz Doce       
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Banana Assada com Canela    
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Mousse de Chocolate           
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Mousse de Maracujá       
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Pudim de Chia com Manga    
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Trufas de Tâmaras e Cacau        
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Sorvete de Frutas             
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Salada de Frutas com Iogurte e Granola          
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Arroz Doce       
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Banana Assada com Canela    
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Mousse de Chocolate           
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Mousse de Maracujá       
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Pudim de Chia com Manga    
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Salada de Frutas com Menta           
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Pudim de Chia                
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Iogurte com Calda de Frutas Vermelhas             
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Creme de Tofu com Frutas Vermelhas       
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Salada de Frutas com Menta           
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Pudim de Chia                
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Iogurte com Calda de Frutas Vermelhas             
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Creme de Tofu com Frutas Vermelhas       
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr> <!--Lanche da Tarde-->
+                            <th>Lanche</th>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Frutas frescas com uma porção de nozes      
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Bolinhos de aveia e banana.            
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Bolo de Cenoura Integral          
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Iogurte com Frutas e Granola      
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Smoothie verde com espinafre, banana e abacate         
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Frutas frescas com iogurte.              
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Mix de Frutas com Iogurte Natural           
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Tapioca com Tomate e Queijo        
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Frutas frescas com uma porção de nozes      
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Bolinhos de aveia e banana.            
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Bolo de Cenoura Integral          
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Iogurte com Frutas e Granola      
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Smoothie verde com espinafre, banana e abacate         
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Frutas frescas com iogurte.              
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Mix de Frutas com Iogurte Natural           
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Tapioca com Tomate e Queijo        
+                                    </li>
+                                </ul>
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Frutas frescas com uma porção de nozes      
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Bolinhos de aveia e banana.            
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Bolo de Cenoura Integral          
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Iogurte com Frutas e Granola      
+                                    </li>
+                                </ul>
+                            </td>
+                            <td colspan="2">
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Homus com palitos de vegetais      
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Palitos de legumes com hummus              
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Smoothie de Frutas e Espinafre           
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Smoothie de Frutas e Amêndoas        
+                                    </li>
+                                </ul>    
+                            </td>
+                        </tr>
+
+                        <tr><!--Jantar-->
+                            <th rowspan="2">Jantar</th>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Curry de lentilhas com arroz integral         
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Espaguete integral com molho de tomate fresco e almôndegas de carne magra                
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Peixe Assado com Batata Doce e Brócolis            
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Lasanha Vegetariana com Massa de Trigo Integral         
+                                    </li>
+                                </ul>    
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Abobrinha recheada com quinoa e vegetais         
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Quinoa salteada com vegetais e camarões grelhados                   
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Peixe Assado com Batata Doce e Brócolis               
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Carne de Porco Grelhada com Legumes             
+                                    </li>
+                                </ul>   
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Curry de lentilhas com arroz integral         
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Espaguete integral com molho de tomate fresco e almôndegas de carne magra                
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Peixe Assado com Batata Doce e Brócolis            
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Lasanha Vegetariana com Massa de Trigo Integral         
+                                    </li>
+                                </ul>    
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Abobrinha recheada com quinoa e vegetais         
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Quinoa salteada com vegetais e camarões grelhados                   
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Peixe Assado com Batata Doce e Brócolis               
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Carne de Porco Grelhada com Legumes             
+                                    </li>
+                                </ul>   
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Curry de lentilhas com arroz integral         
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Espaguete integral com molho de tomate fresco e almôndegas de carne magra                
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Peixe Assado com Batata Doce e Brócolis            
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Lasanha Vegetariana com Massa de Trigo Integral         
+                                    </li>
+                                </ul>    
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Abobrinha recheada com quinoa e vegetais         
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Quinoa salteada com vegetais e camarões grelhados                   
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Peixe Assado com Batata Doce e Brócolis               
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Carne de Porco Grelhada com Legumes             
+                                    </li>
+                                </ul>   
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Curry de lentilhas com arroz integral         
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Espaguete integral com molho de tomate fresco e almôndegas de carne magra                
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Peixe Assado com Batata Doce e Brócolis            
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Lasanha Vegetariana com Massa de Trigo Integral         
+                                    </li>
+                                </ul>    
+                            </td>
+                        </tr>
+
+                        <tr><!--Jantar - Sobremesa-->
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Pudim de Chia com Frutas            
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Salada de Frutas                  
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Sorvete de Banana                
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Compota de Maçã com Canela             
+                                    </li>
+                                </ul> 
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Sorvete de Frutas Caseiro                
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Parfait de Iogurte e Granola                    
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Torta de Maçã                    
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Sorvete de Banana com Amêndoas                 
+                                    </li>
+                                </ul> 
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Pudim de Chia com Frutas            
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Salada de Frutas                  
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Sorvete de Banana                
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Compota de Maçã com Canela             
+                                    </li>
+                                </ul> 
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Sorvete de Frutas Caseiro                
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Parfait de Iogurte e Granola                    
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Torta de Maçã                    
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Sorvete de Banana com Amêndoas                 
+                                    </li>
+                                </ul> 
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Pudim de Chia com Frutas            
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Salada de Frutas                  
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Sorvete de Banana                
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Compota de Maçã com Canela             
+                                    </li>
+                                </ul> 
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Sorvete de Frutas Caseiro                
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Parfait de Iogurte e Granola                    
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Torta de Maçã                    
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Sorvete de Banana com Amêndoas                 
+                                    </li>
+                                </ul> 
+                            </td>
+
+                            <td>
+                                <ul>
+                                    <li class="pratos_pai">
+                                        Pudim de Chia com Frutas            
+                                    </li>
+                                    <li class="pratos_mae">
+                                        Salada de Frutas                  
+                                    </li>
+                                    <li class="pratos_filho">
+                                        Sorvete de Banana                
+                                    </li>
+                                    <li class="pratos_filha">
+                                        Compota de Maçã com Canela             
+                                    </li>
+                                </ul> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>    
+            </article>
+
+            <article class="lista_tarefas" id="lista_tarefas">
+                <h2>Tarefas</h2>
+                <div class="tarefas">
+                    <ul>
+                        <li class="pai">Pai</li>
+                        <ol>
+                            <li class="tarefas_pai">
+                                Jogar Futebol
+                            </li>
+                            <li class="tarefas_pai">
+                                Levar as crianças pra escola
+                            </li>
+                            <li class="tarefas_pai">
+                                Cozinhar
+                            </li>
+                        </ol>
+                    </ul>
+                    <ul>
+                        <li>Mãe</li>
+                        <ol>
+                            <li class="tarefas_mae">
+                                Ajudar filha no piano
+                            </li>
+                            <li class="tarefas_mae">
+                                Fazer compras
+                            </li>
+                        </ol>
+                    </ul>
+                    
+                    <ul>
+                        <li>Filho</li>
+                        <ol>
+                            <li class="tarefas_filho">Tarefa da escola</li>
+                            <li class="tarefas_filho">Arrumar o quarto</li>
+                        </ol>
+                    </ul>
+                    <ul>
+                        <li>Filha</li>
+                        <ol>
+                            <li class="tarefas_filha">Praticar piano</li>
+                            <li class="tarefas_filha">Arrumar o quarto</li>
+                        </ol>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+
+    </footer> 
+    <script src="ex6.js"></script>  
+</body>
+</html>
