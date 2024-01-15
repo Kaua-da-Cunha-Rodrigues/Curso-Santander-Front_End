@@ -3,6 +3,10 @@
     padding: 0;
 }
 :root{
+    --cor1: #113910;
+    --cor2: #f5f5dc;
+    --cor3: #1e1c08;
+
     --cor_pai: #DB3E3A;
     --cor_mae: #218CD9;
     --cor_filho: #59593A;
@@ -12,7 +16,7 @@
 }
 html{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #1E0200;
+    background-color: var(--cor3);
     line-height: 1.5em;
 }
 body{
@@ -21,12 +25,12 @@ body{
 header{
     font-family: 'Courier New', Courier, monospace;
     padding: 20px;
-    background-color: #F5B458;
+    background-color: var(--cor2);
     text-align: center;
 }
 nav{
     padding: 10px;
-    background-color: #F56358;
+    background-color: var(--cor1);
     text-align: center;
     position: sticky;
     top: 0px;
@@ -45,6 +49,7 @@ main{
     max-width: 1080px;
     padding: 25px;
     background-color: white;
+    border-radius: 0 0 5px 5px ;
     margin: auto;
     margin-bottom: 20px;
 }
@@ -168,6 +173,51 @@ main .lista_tarefas ul > li{
     font-family: var(--fonte_destaque);
 }
 
-
+footer{
+    font-family: var(--fonte_destaque);
+    background-color: var(--cor1);
+    text-align: center;
+    padding-top: 10px;
+  }
+  footer .container {
+    width: 100%;
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+  footer .logo img {
+    width: 300px;
+    border-radius: 100%;
+  }
+  
+  footer .contact-info p {
+    color: white;
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  footer .links h4 {
+    margin-top: 10px;
+    color: var(--cor2);
+  }
+  
+  footer .links ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 5px;
+  }
+  
+  footer .links ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  footer .links ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer .links ul li a:hover {
+    color: var(--cor3);
+  }
 
 
