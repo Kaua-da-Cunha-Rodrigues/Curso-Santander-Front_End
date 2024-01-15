@@ -28,6 +28,8 @@ nav{
     padding: 10px;
     background-color: #F56358;
     text-align: center;
+    position: sticky;
+    top: 0px;
 }
 nav a{
     padding: 5px;
@@ -80,12 +82,19 @@ main .cardapio_semanal ul.cores{
     max-width: 400px;
     columns: 4;
     margin: 20px auto;
+    padding: 10px;
     list-style-type: none;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+    z-index: 2;
 }
 main .cardapio_semanal ul.cores li{
     padding: 5px;
     margin: 0 10px;
     border-radius: 5px;
+
 }
 main .cardapio_semanal ul li.cardapio_pai{
     background-color: var(--cor_pai);
@@ -104,7 +113,6 @@ main .cardapio_semanal > ul li{
     text-decoration: underline;
     cursor: pointer;
 }
-
 main .cardapio_semanal table{
     margin: auto;
 }
@@ -152,11 +160,15 @@ main .lista_tarefas .tarefas{
     margin: auto;     
 }
 main .lista_tarefas ul{
-    max-width: 100%;
+    max-width: 80%;
     margin: 20px auto;
 }
 main .lista_tarefas ul > li{
     font-family: var(--fonte_destaque);
+}
+
+main .cardapio_semanal ul.cores{
+    
 }
 
 
