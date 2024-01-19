@@ -1,0 +1,12 @@
+Como abrir um servidor:
+1- Utilizar o CD do cmd para ir até a pasta que vc quer rodar
+
+2- utilizar o comando "json-server --watch db.json"
+
+3- O arquivo "db.json" deve ter uma estrutura base:
+    {
+        "nomeQualquer": [
+            
+        ]
+    }
+.

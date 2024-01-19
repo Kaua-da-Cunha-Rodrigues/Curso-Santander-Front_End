@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <title>Ajude a Causa</title>
+</head>
+<body>
+    <main>
+        <section class="cabecalho">
+            <h1>Ajude a Causa</h1>
+            <hr>
+        </section>
+        
+        <section class="local_inscricao">
+            <form action="" method="post">
+                <div class="campo_form">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" placeholder="Nome Completo">
+                </div>
+                <div class="campo_form">
+                    <label for="idade">Idade</label>
+                    <input type="number" name="idade" placeholder="Idade">
+                </div>
+                <div class="campo_form">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" placeholder="Endereço de email">
+                </div>
+
+                <div class="botoes_radio campo_form">
+                    <div class="camiseta">
+                        <ul>
+                            <label class="titulo_form">Tamanho da Camisa</label>
+                            <li>
+                                <label for="tamanho_camiseta">P</label>
+                                <input type="radio" name="tamanho_camiseta">
+                            </li>
+                            <li>
+                                <label for="tamanho_camiseta">M</label>
+                                <input type="radio" name="tamanho_camiseta">
+                            </li>
+                            <li>
+                                <label for="tamanho_camiseta">G</label>
+                                <input type="radio" name="tamanho_camiseta">
+                            </li>
+                            <li>
+                                <label for="tamanho_camiseta">GG</label>
+                                <input type="radio" name="tamanho_camiseta">
+                            </li>
+                            <li>
+                                <label for="tamanho_camiseta">XG</label>
+                                <input type="radio" name="tamanho_camiseta">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="categoria_inscricao">
+                        <ul>
+                            <label class="titulo_form">Categoria do Evento</label>
+                            <li>
+                                <label for="tipo_corrida">Corrida 3Km [3RUN]</label>
+                                <input type="radio" name="tipo_corrida">
+                            </li>
+                            <li>
+                                <label for="tipo_corrida">Corrida 5Km [5RUN]</label>
+                                <input type="radio" name="tipo_corrida">
+                            </li>
+                            <li>
+                                <label for="tipo_corrida">Caminhada 4Km [4WALK]</label>
+                                <input type="radio" name="tipo_corrida">
+                                                        </ul>
+                            </li>
+                    </div>
+                </div>
+
+                <div class="campo_form">
+                    <label for="doacao">Valor da Doação</label>
+                    <input type="number" placeholder="Apenas o valor">
+                </div>
+                <div class="campo_form">
+                    <button type="submit">Confirmar Inscrição</button>
+                </div>
+            </form>
+        </section>
+    </main>    
+</body>
+</html>

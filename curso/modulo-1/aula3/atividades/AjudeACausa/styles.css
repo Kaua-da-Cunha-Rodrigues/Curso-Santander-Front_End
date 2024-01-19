@@ -1,0 +1,84 @@
+
+main{
+    background-color: aqua;
+    max-width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.cabecalho h1{
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 15px 0;
+    font-size: 2.5em;
+    text-align: center;
+}
+.cabecalho hr{
+    
+}
+.campo_form{
+    margin: 10px 0;
+}
+.campo_form:nth-child(5){
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+.campo_form:nth-child(5) input, .campo_form:nth-child(6){
+    margin: 5px auto;
+    text-align: center;
+}
+.campo_form input[type="text"], input[type="number"], input[type="email"]{
+    width: 50%;
+    height: 20px;
+    padding: 5px;
+    background-color: rgb(243, 242, 242);
+    border: none;
+    border-radius: 5px;
+}
+.campo_form button{
+    border: none;
+    background-color: green;
+    border-radius: 5px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    padding: 15px;
+    cursor: pointer;
+}
+.botoes_radio{
+    display: flex;  
+    background-color: aliceblue; 
+}
+.botoes_radio .camiseta{
+    background-color: beige;
+}
+.botoes_radio .camiseta, .categoria_inscricao{
+    display: flex;
+    padding: 5px 20px;
+}
+.botoes_radio .titulo_form{
+    font-size: 0.em;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+.botoes_radio ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+.botoes_radio ul li{
+    padding: 2px;
+    text-align: left;
+}
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Validação de formulários em HTML5</title>
+
+</head>
+<body>
+    <h1>Atributos de validação</h1>
+    <ul>
+        <li>
+            Atributo required: pode ser utilizado tem input e select
+        </li>
+        <li>
+            Atributo type: usado para validar entrada (email, number, date)    
+        </li>
+        <li>
+            Atributos min e max: especificar valores minimos e máximos em campos numericos
+        </li>
+        <li>
+            Atributo pattern: Validar formatos de dados expecificos
+        </li>
+        <li>
+            Atributo maxlength: limintar o número máximo de caracteres em campos de texto
+        </li>
+        <li>
+            Atributo autocomplete: especifica se um campo deve ser preenchido automaticamente
+        </li>
+        <li>
+            Atributo step: definir incrementos permitidos
+        </li>
+        <li>
+            Atributo list: O elemento datalist é usado para criar uma lista de opções que aparecem como sugestões quando o usuário começa a digitar em um campo de texto. O usuário pode escolher uma opção da lista de sugestões ou continuar digitando. O datalist não cria uma lista suspensa permanente; em vez disso, ele fornece sugestões à medida que o usuário digita.
+        </li>
+    </ul>
+<form method="post" action="">
+    <label for="nome">Nome: </label>
+    <input id="nome" type=text required name=nome/>
+
+    <br />
+    
+    <label for="email">Email: </label>
+    <input id="email" type=text required name=email/>
+
+    <input type="text" list="frutas">
+    <datalist id="frutas">
+        <option value="Maçã">
+        <option value="Banana">
+        <option value="Cereja">
+    </datalist>
+    
+    <input type=submit value="OK"/>
+
+</form>
+
+</body>
+</html>
