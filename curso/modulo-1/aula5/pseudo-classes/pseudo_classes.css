@@ -1,0 +1,51 @@
+.lista1 li:nth-child(even){ /*Pares*/
+    color: red;
+}
+.lista1 li:nth-child(odd){ /*Ímpares*/
+    color: blue;
+}
+
+.lista1 li:nth-child(3){ /*Terceiro Elemento*/
+    color: yellowgreen;
+}
+.lista2 li:nth-child(2n){ /*Múltiplos de 2*/
+    color: tomato;
+}
+
+div span:nth-of-type(2){
+    color: aqua;
+}
+
+p:not(.especial){ /*Os elementos que não são especiais*/
+    color: blue;
+}
+
+h2:before{ /*Antes do elemento h2*/
+    content: "> ";
+    color: green;
+}
+h2:after{ /*Depois do elemento h2*/
+    content: " <";
+    color: green;
+}
+
+.container .box:has(h3, h4){ /*Os elementos que tem o elemento h3*/
+    color: cadetblue;
+}
+
+p:empty{ /*estiliza o que ta vazio*/
+    background-color: green;
+    width: 10px;
+    height: 10px;
+}
+
+.lista3 li:first-child{ /*Pega o primeiro elemento li*/
+    color: chartreuse;
+}
+.lista3 li:last-child{ /*Pega o último elemento li*/
+    color: chocolate;
+}
+
+button:is(:hover, :active){ /*Une pseudo-classes*/
+    background-color: green;
+}

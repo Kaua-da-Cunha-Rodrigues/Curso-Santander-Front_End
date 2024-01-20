@@ -1,0 +1,15 @@
+label{ /*Seletor por tag*/
+    color: blue;
+}
+.paragrafo{ /*Seletor por class*/
+    color: red;
+}
+#texto{ /*Seletor por id*/
+    color: green;
+}
+a[target="_blank"]{ /*Seletor por atributo*/
+    color: brown;
+}
+a[target="_parent"][href="a"]{ /*Seletor por atributo duplo*/
+    color: blueviolet;
+}

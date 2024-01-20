@@ -1,0 +1,9 @@
+div + div{ /*estiliza o "irmão adjascente" (a div que vem depois da div)*/
+    background-color: aqua;
+} 
+div ~ span{ /*irmão geral*/
+    background-color: blueviolet;
+}
+div > span{ /*estiliza os filhos "span" da "div"*/
+    background-color: green;
+}
