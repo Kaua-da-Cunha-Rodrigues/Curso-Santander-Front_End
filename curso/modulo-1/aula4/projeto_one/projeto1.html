@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <title>Magicafé</title>
+</head>
+<body id="home">
+    <header>
+        <div class="campo_logo">
+            <a href="#home"><img src="src/img/logo.png" alt="Logo do Magic Coffe"></a>
+        </div>
+        <div class="redes_sociais">
+            <a href="#">
+                <img src="src/img/icon_instagram.webp" alt="Insta">
+            </a>
+            <a href="#">
+                <img src="src/img/icon_facebook.webp" alt="Face">
+            </a>
+            <a href="#">
+                <img src="src/img/icon_github.png" alt="N sei">
+            </a>
+        </div>
+    </header> 
+    <nav class="barra_navegacao">
+        <div class="topicos_de_navegacao">
+            <a href="#sobre">
+                SOBRE
+            </a>
+            <a href="#catalogo">
+                CATÁLOGO
+            </a>
+            <a href="#cardapio">
+                CARDÁPIO
+            </a>
+            <a href="#formulario">
+                SAIBA MAIS
+            </a>
+        </div>
+    </nav>   
+    <main>
+
+        <section id="sobre">
+            <div class="campo_descricao">
+                <p class="paragrafo_descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ex quibusdam, necessitatibus, quam aliquam quas architecto recusandae expedita minus iure provident quaerat repellendus magni qui vero enim magnam sint voluptatem.</p>
+                <img src="src/img/cafe1.jpg" alt="imagem ilustrativa">
+            </div>
+            <div class="campo_descricao">
+                <img src="src/img/cafe3.jpg" alt="imagem ilustrativa">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolores temporibus delectus recusandae, molestiae eligendi labore quis architecto beatae nostrum id commodi doloribus obcaecati optio corporis assumenda possimus dolorum voluptate?</p>
+            </div>
+            <div class="campo_descricao">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit reprehenderit beatae labore hic vel repellendus facilis atque officia placeat magni consectetur saepe, aspernatur aliquam ipsam doloribus, rem impedit unde veritatis!</p>
+                <img src="src/img/cafe2.jpg" alt="imagem ilustrativa">
+            </div>
+        </section>
+
+        <section class="descricao">
+            <div class="imagem_introducao"></div>
+        </section>
+
+        <section id="catalogo">
+            <h2 class="titulo_topico">Livro de Receitas do Mago</h2>
+            <article class="cards_catalogo">
+                <ul>
+                    <li class="card">
+                        <figure>
+                            <img src="src/img/cafe1.jpg" alt="Café">
+                            <figcaption>Poção de Vigor (Café Preto)</figcaption>
+                        </figure>   
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="src/img/bolo1.jpg" alt="Bolo">
+                            <figcaption>Bolo 1</figcaption>
+                        </figure>
+                    </li>
+
+                    <li class="card">
+                        <figure>
+                            <img src="src/img/cafe2.jpg" alt="Café com Leite">
+                            <figcaption>Poção de Mana (Café com Leite)</figcaption>
+                        </figure>   
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="src/img/bolo2.png" alt="Bolo">
+                            <figcaption>Bolo 2</figcaption>
+                        </figure>
+                    </li>
+
+                    <li class="card">
+                        <figure>
+                            <img src="src/img/cafe3.jpg" alt="Cappuccino">
+                            <figcaption>Poção do Amor (Cappuccino)</figcaption>
+                        </figure>   
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="src/img/bolo3-2.png" alt="Bolo">
+                            <figcaption>Bolo 1</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="cardapio">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="4">Cardápio</th>
+                    </tr>
+                    <tr class="linha2">
+                        <th colspan="2">
+                            -------
+                        </th>
+                        <th>Preços</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th rowspan="3">Bebidas</th>
+                        <td>Café Preto</td>
+                        <td>Preço</td>
+                    </tr>
+                    <tr>
+                        <td>Café com Leite</td>
+                        <td>Preço</td>
+                    </tr>
+                    <tr>
+                        <td>Cappuccino</td>
+                        <td>Preço</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Doces</th>
+                        <td>Bolo de Chocolate com Cereija</td>
+                        <td>Preço</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Bolo de Chocolate com Morango</td>
+                        <td>Preço</td>
+                    </tr>
+                    <tr>
+                        <td>Bolo Red Velvet</td>
+                        <td>Preço</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="formulario">
+            <h2 class="titulo_topico">Acompanhe nosso trabalho!</h2>
+            <form action="">
+                <div class="campo_form">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+                <div class="campo_form">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="botao_check">
+                    <input type="checkbox" id="receber_emails">
+                    <label for="receber_emails">Eu aceito receber emails para ficar por dentro das novidades</label>
+                </div>
+                <div class="campo_submit">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="contatos" id="contatos">
+        <div class="contact-info">
+          <p class="email">Email: cunhakaua2@gmail.com</p>
+        </div>
+        <div class="links">
+          <h4>Links úteis</h4>
+          <ul>
+            <li><a href="https://github.com/Kaua-da-Cunha-Rodrigues" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/kau%C3%A3-da-cunha-rodrigues-66793324b/" target="_blank">Linkedin</a></li>
+          </ul>
+        </div>
+    </footer> 
+</body>
+</html>
