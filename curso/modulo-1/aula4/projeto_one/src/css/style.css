@@ -12,7 +12,7 @@ html{
     background-color: var(--cor5);
     scroll-behavior: smooth;
     font-family: var(--fonte-padrao);
-    font-size: 0.9em;
+    font-size: 1em;
 }
 header{
     background-color: var(--cor4);
