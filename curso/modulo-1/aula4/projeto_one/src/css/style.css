@@ -116,7 +116,7 @@ main #catalogo .cards_catalogo ul{
     margin: 0 auto;
 }
 main #catalogo .cards_catalogo ul li{
-    width: 200px;
+    width: 220px;
     margin: 10px;
     padding: 0 0 8px 0;
     border-radius: 15px;
@@ -134,7 +134,7 @@ main #catalogo .cards_catalogo ul li .titulo_card{
     font-size: 1.2em;
 }
 main #catalogo .cards_catalogo img{
-    width: 200px;
+    width: 220px;
     height: 170px;
     border-radius: 15px 15px 0 0;
 }
