@@ -64,6 +64,9 @@
         margin: auto;
         max-width: 350px;
     }
+    main #formulario .campo_form{
+        width: 70%;
+    }
 }
 @media (max-width: 400px){
     main #formulario form{
