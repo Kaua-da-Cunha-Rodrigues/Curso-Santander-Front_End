@@ -6,7 +6,7 @@
     --cor5: #997171;
 
     --fonte-padrao: "Poppins", sans-serif;
-    --fonte-destaque: ;
+    --fonte-destaque: 'Lilita One', sans-serif;
 }
 html{
     background-color: var(--cor5);
@@ -30,16 +30,30 @@ header > .campo_logo, header .redes_sociais{
     display: inline-block;    
 }
 header .redes_sociais{
-    float: right;
+    float: right; 
+    padding-top: 5px;
     position: relative;
     top: 50%;
-    transform: translateY(55%); 
+    transform: translateY(25%); 
+    
+}
+header .redes_sociais button{
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.s ease-in-out;
+}
+header .redes_sociais button:hover{
+    transform: scale(1.05);
 }
 header .redes_sociais img{
     width: 20px;
     margin: 0 10px;
 }
 nav{
+    width: 480px;
+    margin: auto;
     top: -38px;
     position: relative;
     text-align: center;
@@ -50,6 +64,10 @@ nav a{
     font-weight: bold;
     text-decoration: none;
     margin: 0 10px;
+}
+nav a:hover{
+    color: var(--cor1);
+    text-decoration: underline;
 }
 main .titulo_topico{
     text-align: center;
@@ -81,7 +99,7 @@ main #sobre .campo_descricao p{
     margin: 0 auto; 
 }
 main #sobre .campo_descricao img{
-    width: 200px;
+    width: 300px;
 
 }
 main #sobre .campo_descricao:nth-child(even) p{
@@ -103,8 +121,17 @@ main #catalogo .cards_catalogo ul li{
     padding: 0 0 8px 0;
     border-radius: 15px;
     text-align: center;
+    font-size: 0.8em;
     background-color: var(--cor4);
     color: white;
+}
+main #catalogo .cards_catalogo ul li .titulo_card{
+    display: block;
+    font-family: var(--fonte-destaque);
+    background-color: var(--cor2);
+    margin-bottom: 5px;
+    padding: 0 2px;
+    font-size: 1.2em;
 }
 main #catalogo .cards_catalogo img{
     width: 200px;
@@ -128,8 +155,6 @@ main #cardapio table ,tr, td, th{
     border-collapse: collapse;
 }
 main #cardapio table th{
-    color: white;
-    font-weight: bold;
     font-family: var(--fonte-destaque);
 }
 main #cardapio table thead th{
@@ -183,6 +208,10 @@ main #formulario button{
     font-family: var(--fonte-destaque);
     font-weight: bold;
     cursor: pointer;
+}
+main #formulario button:hover{
+    color: var(--cor4);
+    transform: scale(1.05);
 }
 
 
