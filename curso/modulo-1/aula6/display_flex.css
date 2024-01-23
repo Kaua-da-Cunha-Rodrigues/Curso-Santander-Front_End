@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+
+    gap: 10px; /*Espaçamento de todos os lados*/
+    column-gap: 10px; /*Espaçamento entre as colunas*/
+    row-gap: 10px; /*Espaçamento entre as linhas*/
+
+    flex-direction: row;
+    flex-wrap: wrap; /*Permite a quebra de linha dos elementos de acordo com o tamanho da tela*/
+    flex-flow: row wrap; /*junta o diretion e o wrap*/
+    justify-content: center;
+    /* align-items: center; usado quando usamos nowrap*/
+
+}
+.card{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    border: 1px solid black;
+    position: relative; /*position do pai*/
+    /*  
+        STATIC: Padrão e não conta como position
+        RELATIVE: Se orienta a partir dele mesmo
+        ABSOLUTE: Procura o primeiro ascendente que tem position, se nenhum ascendente possuir, ele se orienta pelo body
+        FIXED: Se orienta à tela e fica fixo, independente da rolagem
+        STICKY: Quando vc passa por esse elemento com o scroll, ele assume a posição que vc determinar
+    */
+    position: sticky;
+}
+.container .card span{
+    position: absolute; /*Para ele se orientar de acordo com o tamanho do pai, o pai precisa ter position definido*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .card:last-child{
+    order: -1; /*ele ordena o elemento span 3 para primeiro da fila*/
+}
+.container .card:hover{
+    flex-grow: 100; /*faz o elemento ser flexível e pode aumentar de tamanho*/
+}
