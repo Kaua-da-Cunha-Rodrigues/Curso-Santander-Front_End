@@ -60,33 +60,29 @@ class Conta{
 
     }
     sacar(valor){
-        if(this.#contaAtiva === true && this.#saldo > 0 && valor <= this.#saldo && !isNaN(valor)){
+        if(this.#contaAtiva === true && this.#saldo > valor && valor <= this.#saldo && !isNaN(valor)){
             this.#saldo -= valor;
             console.log(`Saque de R$ ${valor} feito com sucesso!`)
-        }    
+        }else{
+            console.log("Não foi possível realizar o saque")
+        }
     }
     exibirDados(){
-        console.log(this.#nomeTitular)
-        console.log(this.#saldo)
-        console.log(this.#contaAtiva)
+        console.log("------------------------------------")
+        console.log(`Nome do Titular: ${this.#nomeTitular}`)
+        console.log(`Saldo Atual: ${this.#saldo}`)
+        console.log(`Conta ativa: ${this.#contaAtiva}`)
+        console.log("------------------------------------")
     }
 
 }
-
-let listaContas = []
 function criarConta(cliente) {
     let id = 0
     if(typeof cliente === "string"){
-        const id = new Conta(cliente)
+        const pessoa = new Conta(cliente)
         
-        const novaConta = {
-        id: listaContas.length,
-        titular: id.titular,
-        saldo: 0,
-        contaAtiva: true
-        }
-        listaContas.push(novaConta);
-        console.log("Conta Criada com sucesso")
+        listaContas.push(pessoa);
+        console.log("Conta Criada com sucesso!")
 
         id += 1
     }else{
@@ -94,31 +90,19 @@ function criarConta(cliente) {
     }
 
 }
-console.log(criarConta("Kauã"))
-console.log(criarConta("Cláudio"))
-console.log(listaContas[0].id.exibirDados())
-console.log(listaContas)
+function varrerClientes(lista){
+    for(const contas of listaContas){
+        console.log(contas.exibirDados());
+    }
+}
 
-// const listaContas = {};
+let listaContas = []
 
-// const cliente = new Conta("Kauã")
-// const cliente2 = new Conta("Jorge")
-// let clienteX
-// listaContas.push(clienteX = new Conta("Maria"))
-
-// listaContas.push(cliente)
-// listaContas.push(cliente2)
-
-// for(const conta of listaContas){
-//     console.log(conta.exibirDados());
-// }
+console.log(criarConta("Kauã")) //armazena uma conta na classe
+console.log(criarConta("Cláudio")) //armazena uma conta na classe
+varrerClientes(listaContas)
 
 
-//OK
-// console.log(cliente.inativarConta())
-// console.log(cliente.exibirDados())
-// console.log(cliente.ativarConta())
-// console.log(cliente.exibirDados())
 
 
 
