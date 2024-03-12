@@ -51,5 +51,5 @@ const novaConta: TConta = {
     saldo: 200
 } //objeto tipado com o type Iconta
 
-const conta = new Conta(novaConta.nomeTitular, novaConta.saldo)
-const conta2 = new Conta(novaConta2.nomeTitular, novaConta2.saldo)
+const conta = new Contas(novaConta)
+const conta2 = new Contas(novaConta2)
