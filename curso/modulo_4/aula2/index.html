@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2</title>
+</head>
+<body>
+    <h1>Título</h1>     
+    <p class="paragrafo" name="meuNome">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eligendi laboriosam possimus doloribus maxime. Ipsa iusto eligendi accusamus voluptates non.</p>
+    <div id="divisao">
+        Meu conteúdo
+    </div>
+    <input type="text" value="Conteúdo">
+
+    <button onclick="botaoClicado()">Botão</button>
+</body>
+<script>
+
+    function botaoClicado(){
+    
+        console.log("botão clicado")
+    }
+    /*
+
+        console.dir(document) mostra o DOM
+        getElementsByTagName
+        getElementsByClassName
+        getElementById
+        getElementsByName
+        querySelector
+        Retorna um elemento
+        querySelectorAll
+        Retorna uma NodeList
+
+    */
+   /*
+        HTMLCollection retorna o HTML literal
+        NodeList
+   */
+   console.log(document.getElementsByTagName("h1")) //retorna HTMLcollection
+   console.log(document.getElementsByClassName("paragrafo")) //retorna HTMLcollection
+   console.log(document.getElementById("divisao")) //retorna o elemento em si
+   console.log(document.getElementsByName("meuNome")) //retorna node list
+   console.log(document.querySelector("h1")) //retorna o primeiro elemento h1 achado
+   console.log(document.querySelectorAll("p")) //retorna todos os elementos p
+
+
+   document.getElementById("divisao").innerHTML = "" //muda todo conteúdo html do elemento
+   document.getElementById("divisao").innerText = "aaaa" //muda somente o texto do elemento
+
+
+   const elemento = document.createElement("div") //cria uma div
+   elemento.innerText = "Elemento criado" // muda o texto do elemento
+   document.getElementById("divisao").appendChild(elemento) //introduz esse elemento como filho da div com ID "divisão"
+</script>
+</html>
