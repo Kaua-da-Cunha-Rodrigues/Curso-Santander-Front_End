@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Compras Aula 4</title>
+</head>
+<body>
+    <h1>Lista de Compras</h1> 
+    <hr>
+
+    <input type="text" placeholder="Produto" id="produto">
+    <br><br>
+    <input type="text" placeholder="Valor" id="valor">
+    <br><br>
+    <input type="text" placeholder="Imagem" id="imagem">
+    <br><br>
+    <button id="btnAdicionarProduto">Adicionar Produto</button>
+    <hr>
+
+    <h2>Lista de Produtos</h2>
+    <div id="listaProdutos">
+        <div id="produto_1" style="display: inline-block;">
+            <img src="" alt="Banana">
+            <div id="descricao_produto_1" style="text-align: center;">
+                Banana - R$ 10,00
+                <button>Remover</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    /*o addEventListener recebe dois parâmetros: O evento que ele vai ler e uma função para fazer quando esse evento for detectado*/
+    const btnAdicionarProduto = document.getElementById("btnAdicionarProduto").addEventListener("click", () =>{
+        const elProduto = document.getElementById("produto").value
+        const elValor = document.getElementById("valor").value
+        const elImagem = document.getElementById("imagem").value
+
+        const lista = document.getElementById("listaProdutos")
+        const id = lista.children.length + 1
+        const productId = `produto_${id}`
+
+        const divProduto = document.createElement("div")
+        divProduto.setAttribute("style", "display:inline-block;")
+
+        divProduto.setAttribute("id", productId)
+
+        divProduto.innerHTML =`
+            <img src="${elImagem}" alt="Banana">
+                <div id="descricao_produto_1" style="text-align: center;">
+                    ${elProduto} - R$ ${elValor}
+                    <button>Remover</button>
+                </div>
+        `
+
+        lista.appendChild(divProduto)
+
+        elProduto.value = ""
+        elImagem.value = ""
+        elValor.value = ""
+    })
+</script>
+</html>

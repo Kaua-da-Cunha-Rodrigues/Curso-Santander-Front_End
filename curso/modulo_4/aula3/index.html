@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3</title>
+    <style>
+        .textoVerde{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <p>P1</p>   
+    <p>P2</p>   
+    <p>P3</p>    
+    <hr>
+
+    <p class="textoVerde">texto verde</p>
+    <hr>
+
+    <h2>Lista de Compras</h2>
+    <ul>
+        <li>Elemento 1 da lista</li>
+        <li>Elemento 2 da lista</li>
+        <li>Elemento 3 da lista</li>
+        <li>Elemento 4 da lista</li>
+        <li>Elemento 5 da lista</li>
+    </ul>
+    <hr>
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ol>
+
+</body>
+<script>
+    const pElements = document.querySelectorAll("p")
+
+    pElements.forEach((elemento, index) => {
+        console.log(elemento) //imprime o elemento
+        console.log(index) //imprime o índice
+    })
+</script>
+</html>
