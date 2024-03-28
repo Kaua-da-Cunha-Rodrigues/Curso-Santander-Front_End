@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lampadas</h1>
+    <input type="text" name="item" id="item">
+    <button id="btnAddItem">Adicionar lâmpada</button>
+    <div id="lista">
+    </div>
+</body>
+<script>
+    const button = document.getElementById("btnAddItem");
+    const lista = document.getElementById("lista");
+    const input = document.getElementById("item");
+
+    function estaQuebrada(el) {
+        return el.getAttribute('quebrada');
+    }
+
+    button.addEventListener("click", () => {
+        const lampada = document.createElement("div");
+        lampada.style.textAlign = "center";
+        const valor = input.value.trim();
+        if (!valor) {
+            alert("O texto é necessário");
+            return;
+        }
+
+        lampada.style.display = "inline-block";
+        lampada.innerHTML = `
+            <img src="./assets/apagada.jpg" alt="Imagem de uma lâmpada apagada" />
+            <p>${valor}</p>
+            `;
+        lista.appendChild(lampada);
+
+        lampada.addEventListener("mouseenter", () => {
+            if (estaQuebrada(lampada)) {
+                return;
+            }
+            lampada.querySelector('img').src = "./assets/acesa.jpg"
+        })
+
+        lampada.addEventListener("mouseleave", () => {
+            if (estaQuebrada(lampada)) {
+                return;
+            }
+            lampada.querySelector('img').src = "./assets/apagada.jpg"
+        })
+
+        lampada.addEventListener("click", () => {
+            lampada.setAttribute("quebrada", true);
+            lampada.querySelector('img').src = "./assets/quebrada.jpg"
+        })
+    })
+</script>
+
+</html> -->
