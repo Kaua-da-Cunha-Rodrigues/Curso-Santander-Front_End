@@ -1,0 +1,42 @@
+body{
+    background-color: #222222;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+h1{
+    text-align: center;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.divLampada{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+.divLampada img{
+    width: 200px;
+}
+.botaoResetar{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(245, 179, 36);
+    padding: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: 0.2s;
+    margin-top: 10px;
+}
+.botaoResetar:hover{
+    transform: scale(1.05);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa Lâmpada</title>
+    <link rel="stylesheet" href="src/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Lâmpada com JS</h1>
+        <hr>
+    </header>
+    <main>
+        <div class="divLampada">
+                <img src="assets/apagada.jpg" alt="Lâmpada apagada" class="imagemLampada">
+                <button class="botaoResetar">Resetar</button>
+        </div>
+    </main>  
+</body>
+<script>
+    const lampada = document.querySelector(".imagemLampada")
+    const botaoResetar = document.querySelector(".botaoResetar")
+
+    lampada.addEventListener("mouseover", () =>{
+        if(lampada.getAttribute("src") != "assets/quebrada.jpg"){   
+            lampada.setAttribute("src", "assets/acesa.jpg")
+            
+        }       
+    })
+    lampada.addEventListener("mouseout", () => {
+        if(lampada.getAttribute("src") != "assets/quebrada.jpg"){
+            lampada.setAttribute("src", "assets/apagada.jpg")
+        }   
+    })
+    lampada.addEventListener("click", () => {
+        lampada.setAttribute("src", "assets/quebrada.jpg")
+    })
+
+    botaoResetar.addEventListener("click", () => {
+        lampada.setAttribute("src", "assets/apagada.jpg")     
+    })
+</script>
+</html>
