@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Login Ada</h1>
+        <form action="">
+            <label for="login">
+                Login
+            </label>
+            <input type="text" id="input_login">
+            <br>
+            <label for="senha">
+                Senha
+            </label>
+            <input type="password" id="input_senha">
+            <br>
+
+            <button id="botao_login">Login</button>
+        </form>
+    </div>   
+</body>
+<script>
+    const inputLogin = document.getElementById("input_login")
+    const inputSenha = document.getElementById("input_senha")
+    const botaoLogin = document.getElementById("botao_login")
+
+    const usuarioCorreto = {
+        "user": "ada",
+        "senha": "ada123"
+    }
+
+    function validaUsuarioAutenticado(){
+        const usuarioAutenticado = sessionStorage.getItem("usuarioAutenticado") //obtem o login do usuario true
+
+        if(usuarioAutenticado === "true"){
+            window.location.href = "./paginas/logado.html"
+        }//
+
+        if(localStorage.getItem("loginUsuario")){
+            inputLogin.value = localStorage.getItem("loginUsuario");   
+        }
+    }
+
+    validaUsuarioAutenticado()
+
+    botaoLogin.addEventListener("click", (e)=>{
+        
+        const loginVal = inputLogin.value
+        const senhaVal = inputSenha.value
+
+        if(
+            loginVal != usuarioCorreto.user ||
+            senhaVal != usuarioCorreto.senha
+        ){
+            return alert("Usuário e/ou senhas inválidos")
+        }
+        e.preventDefault() //previne o refresh da página caso login e senha estejam corretos
+
+        sessionStorage.setItem("usuarioAutenticado", "true") //guarda o login do usuario como true (logado) caso ele dê refresh na página
+
+        localStorage.setItem("loginUsuario", loginVal) //guarda o login do usuário pra quando ele abrir a página em outro momento, o login correto já estar la
+
+        window.location.href = "./paginas/logado.html" //troca de página
+    })
+
+    function resetaValoresInput(){
+        inputLogin.value = ""
+        inputSenha = ""
+    }
+</script>
+</html>
