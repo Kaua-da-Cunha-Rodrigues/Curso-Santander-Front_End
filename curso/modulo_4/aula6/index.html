@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>lista compras aula 5</title>
+</head>
+<h1>Lista de compras</h1>
+<input id="limite" class="cabecalho" placeholder="Limite de preço (00.00)" type="number">
+<br>
+<input id="produto" placeholder="Produto" class="cabecalho" type="text">
+<input id="valor" placeholder="Valor (00.00)" class="cabecalho" type="text">
+<button id="add">Adicionar Produto</button>
+
+<ul id="lista">
+
+</ul>
+<hr>
+<h3>Soma </h3>
+<span id="soma">R$0,00</span>
+
+<body>
+</body>
+<script>
+    const btnAddProduto = document.getElementById("add");
+    const lista = document.getElementById("lista");
+    const produto = document.getElementById("produto");
+    const valor = document.getElementById("valor");
+    const soma = document.getElementById("soma");
+    const limite = document.getElementById("limite");
+
+    let id = 3;
+    let total = 0;
+
+    /*
+        id
+        Nome
+        Valor
+    */
+    const itens = [
+        {
+            id: 1,
+            produto: "Arroz - 1kg",
+            valor: 25.00
+        },
+        {
+            id: 2,
+            produto: "Feijao - 1kg",
+            valor: 17.00
+        }
+    ];
+
+    // Renderização
+    function renderizar() {
+        itens.forEach((el) => {
+            geraElemento(el);
+        })
+    }
+    renderizar();
+    // Fim Renderização
+
+    //Listeners
+    btnAddProduto.addEventListener("click", () => {
+        handleAddProduto();
+    })
+    //Fim Listeners
+
+    // Handlers
+    function handleAddProduto() {
+        const inputsValidos = validaInputs();
+        if (!inputsValidos) return;
+
+        const inputProduto = produto.value;
+        const inputValor = valor.value;
+
+        const novoProduto = {
+            id: id,
+            produto: inputProduto,
+            valor: inputValor
+        }
+
+        geraElemento(novoProduto);
+
+        id++;
+    }
+    //
+
+    //Validators
+    function validaProduto(produto) {
+        if (!produto) { // "" ou null ou undefined
+            alert("Nome do produto inválido");
+            return false;
+        }
+        return true;
+    }
+
+    function validaValor(valor) {
+        const floatVal = parseFloat(valor).toFixed(2);
+        if (!valor || isNaN(floatVal)) {
+            alert("Valor do produto inválido");
+            return false;
+        }
+
+        return true;
+    }
+
+    function validaInputs() {
+        let valido = true;
+        valido = validaProduto(produto.value);
+        valido = validaValor(valor.value);
+        return valido;
+    }
+
+    //Fim validators
+
+    //Utils 
+    /* function formatarValor(n) {
+        n = parseFloat(n);
+        return Intl.NumberFormat('pt-BR', {
+          style: 'currency',
+          currency: 'BRL',
+        }).format(n);
+      }
+    */
+
+    function formataValor(valor) {
+        const floatVal = parseFloat(valor).toFixed(2);
+        if (isNaN(floatVal)) {
+            alert("Numero em formato inválido");
+            return;
+        }
+        const strVal = String(floatVal).replace(".", ",");
+        return `R$ ${strVal}`;
+    }
+
+    function geraElemento(el) {
+        const li = document.createElement("li");
+        li.id = el.id;
+
+        const checkboxId = `checkbox_produto_${el.id}`;
+        const btnRemoverId = `btn_remover_${el.id}`;
+
+        const html = `
+                <input class="checkbox" type="checkbox" name="" id="${checkboxId}">
+                <span>${el.produto}</span>
+                <span>${formataValor(el.valor)}</span>
+                <button id="${btnRemoverId}">Remover</button>
+                `
+        li.innerHTML = html;
+
+        lista.appendChild(li);
+        // Os listeners só funcionam após o elemento estar no DOM
+        // E não somente no document
+
+        const checkbox = document.getElementById(checkboxId);
+        const btnRemover = document.getElementById(btnRemoverId)
+        checkbox.addEventListener("click", () => {
+            const estaSelecionado = checkbox.checked;
+            li.querySelectorAll("span").forEach(el => {
+                el.style.textDecoration = estaSelecionado ? 'line-through' : 'none'
+            });
+        })
+
+        btnRemover.addEventListener("click", () => {
+            // const array = Array.from(li.children); Outra forma de fazer
+            
+            //Melhor forma por causa de compatibilidade
+            //Para lidar com navegadores antigos
+            for (const child of li.children) {
+                child.remove();
+            }
+            li.remove();
+
+            total -= el.valor;
+            exibeSoma();
+        })
+
+        total += parseFloat(el.valor);
+        exibeSoma();
+    }
+
+    function exibeSoma(){
+        if(limite.value && (total > limite.value)){
+            soma.classList.add("valor-excedido")
+        }else{
+            soma.classList.remove("valor-excedido");
+        }
+        const valorFormatado = formataValor(total);
+        soma.innerText = valorFormatado
+    }
+    //Fim Utils
+
+</script>
+
+</html>
