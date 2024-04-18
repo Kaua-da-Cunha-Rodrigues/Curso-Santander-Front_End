@@ -1,1 +1,0 @@
-após a instalação, eu dei um ng s
