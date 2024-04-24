@@ -1,5 +1,3 @@
-
-
 Passos
 
     1 - Instalar o node
@@ -12,13 +10,18 @@ https://angular.io/cli
 
 2- npm i -g @angular/cli@16.2.13 
 
-3- ng new site
+3- ng new <nome-Projeto>
 
 Adicional
 
 ng version - Para ver a versão do angular e do node
+
+ng help - Ajuda a ver mais comandos
+
 ng serve ou npm start - Para rodar 
+
 control C - Fecha o start
+
 npm run build - Compila para nativo para subir para o servidor. É como se pegasse o ts e convertesse para js normal para o navegador rodar
 ---
 
