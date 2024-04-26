@@ -29,3 +29,25 @@ Aula 2
     Utilizei *ngIf na divisão da home e do app-about para só exibir essa áreas quando o currentPage for igual ao nome delas
 
     Na barra de navegação, peguei a âncora do "Sobre Nós" e adicionei um evento de (click) que chama uma função do app.component.ts
+
+Aula 3
+
+    Criei os componentes "home", "contact" e "address" e colei seus respectivos conteúdos no arquivo html
+
+    atualizei todas as ancoras com (click) chamando a função "goToPage", criada no app.component.ts, para cada respectiva página
+
+    Fui em home.component.ts e criei um objeto sectionFeatures que recebe dinamicamente os valores da aba destaques da página home
+
+    Adicionei uma interpolação de string no h1 "Destaque", que basicamente é pegar o elemento do ts de home.component.ts e passar para o html. {{ sectionFeatures.title }}
+
+    Para tipar o nosso atributo sectionFeatures, criei uma pasta models em app e criei um arquivo para tipar todos os valores de sectionFeatures
+
+    Fiz a interpolação para todos os outros elementos
+
+    Puxei o sectionFeatures do home.ts (componente filho), pro app.component.ts (componente pai)
+
+    em app.component.html, no app-body, eu adicionei o property binding [homeData] para importar o atributo do pai para a home
+
+    Em home.component.ts eu adicionei um @Input que recebe o homeData como sendo do tipo SectionModel
+
+    Substitui todos os "sectionFeatures" de home.component.html por "homeData"

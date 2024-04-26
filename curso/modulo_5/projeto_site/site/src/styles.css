@@ -3,6 +3,9 @@
 .navbar-brand img {
     height: 48px;
   }
+  a{
+    cursor: pointer;
+  }
   
   #main {
     min-height: 60vh;

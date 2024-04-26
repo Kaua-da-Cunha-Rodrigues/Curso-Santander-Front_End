@@ -66,3 +66,15 @@
      Para fazer a chamada de um componente dentro do app.component.html, utilizamos o seu nome seletor como uma tag HTML. Esse seletor fica no arquivo <nome-componente>.component.ts
 
      Por exemplo, para utilizar o componente about na estrutura, utilizados <app-about></app-about>. Assim, o conteúdo do html do componente será puxado para a tela
+
+# Aula 3
+
+   ##  Databiding
+
+     É a comunicação entre o template (HTML) e o código Typescript (lógica de negócio). Ela pode ser feita de três formas:
+
+          Dados do Typescript para o template HTML (interpolação de string ou property binding). Ex: {{ interpolação }}
+
+          Dados do template para o Typescript (event binding). Ex: (click)
+
+          Ou, ainda, combinando as duas formas anteriores (two-way-binding)
