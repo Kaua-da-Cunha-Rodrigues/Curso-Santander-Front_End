@@ -1,10 +1,10 @@
-Aula 1
+# Aula 1
 
     npm i -g @angular/cli@16.2.13 - baixei o Angular
 
     ng new site - criei o projeto site em Angular
 
-Aula 2
+# Aula 2
 
     npm run build - Compilei e subi a aplicação para o servidor poder rodar o ts no navegador
 
@@ -30,7 +30,7 @@ Aula 2
 
     Na barra de navegação, peguei a âncora do "Sobre Nós" e adicionei um evento de (click) que chama uma função do app.component.ts
 
-Aula 3
+# Aula 3
 
     Criei os componentes "home", "contact" e "address" e colei seus respectivos conteúdos no arquivo html
 
@@ -51,3 +51,12 @@ Aula 3
     Em home.component.ts eu adicionei um @Input que recebe o homeData como sendo do tipo SectionModel
 
     Substitui todos os "sectionFeatures" de home.component.html por "homeData"
+
+    Criei uma pasta chamada "constants" que recebe o enum para as páginas, que é chamada em app.component.html e o ts.
+
+    Na pasta models em section-features. criei uma interface AppData, que receberá a tipagem das seções de todos os componentes.
+
+    Esse AppData é importado no app.component, e através dele, eu adiciono todos os textos para serem carregados de forma dinâmica.
+    Para puxar esses textos em seus devidos components, adicionei uma propriedade em app.component.html em cada chamada de componente, uma propriedade. Ex: em <app-home [homeData]="AppData.SectionFeatures">
+    
+     no ts de cada um (Ex: home.component.ts) um @input recebendo <nome-component>Data: <interface que define seu tipo> e em seu html, coloquei esse valor usando property-biding para chamar seus valores: Ex: em home, eu tenho o homeData. Para chamar o valor da propriedade título dele, eu uso {{ appData.title }} dentro do h1

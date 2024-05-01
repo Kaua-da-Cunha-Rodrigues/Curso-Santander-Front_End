@@ -18,18 +18,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" (click)="goToPage('HOME')">
+          <a class="nav-link active" (click)="goToPage(pages.HOME)">
             Home
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="goToPage('ABOUT')">Sobre nós</a>
+          <a class="nav-link" (click)="goToPage(pages.ABOUT)">Sobre nós</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="goToPage('ADDRESS')">Endereço</a>
+          <a class="nav-link" (click)="goToPage(pages.ADDRESS)">Endereço</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="goToPage('CONTACT')">Contato</a>
+          <a class="nav-link" (click)="goToPage(pages.CONTACT)">Contato</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -50,13 +50,25 @@
 <main id="main">
   
   <!--O homeData é um property binding e está passando o atributo sectionFeatures do componente pai (app) para o componente filho (home)-->
-  <app-home *ngIf="currentPage === 'HOME'" [homeData]="sectionFeatures"></app-home>
+  <app-home 
+    *ngIf="currentPage === 'HOME'" 
+    [homeData]="appData.sectionFeatures"
+  ></app-home>
 
-  <app-about *ngIf="currentPage === 'ABOUT'"></app-about>
+  <app-about 
+    *ngIf="currentPage === 'ABOUT'"
+    [aboutData]="appData.sectionAbout"
+  ></app-about>
 
-  <app-address *ngIf="currentPage === 'ADDRESS'"></app-address>
+  <app-address 
+    *ngIf="currentPage === 'ADDRESS'"
+    [addressData]="appData.sectionAddress"
+  ></app-address>
 
-  <app-contact *ngIf="currentPage === 'CONTACT'"></app-contact>
+  <app-contact 
+    *ngIf="currentPage === 'CONTACT'"
+    [contactData]="appData.sectionContact"
+  ></app-contact>
 
 </main>
 <!-- End Main -->

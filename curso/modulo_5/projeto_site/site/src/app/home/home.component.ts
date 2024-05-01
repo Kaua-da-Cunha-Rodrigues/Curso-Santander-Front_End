@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { SectionModel } from '../models/section-features.model';
+import { sectionFeatures } from '../models/section-features.model';
 
 @Component({
   selector: 'app-home',
@@ -7,5 +7,5 @@ import { SectionModel } from '../models/section-features.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  @Input() homeData!: SectionModel
+  @Input() homeData!: sectionFeatures
 }
