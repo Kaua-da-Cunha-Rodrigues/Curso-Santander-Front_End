@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { AppData} from './models/section-features.model';
+import { Component, OnInit } from '@angular/core';
+import { AppData, SectionContact} from './models/section-features.model';
 import { Pages } from './constants/pages.enum';
 
 @Component({
@@ -7,10 +7,10 @@ import { Pages } from './constants/pages.enum';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
 
-  //Recebe o tipo enum de PAGES (enum é como se fosse uma gaveta de constantes)
-  currentPage!: Pages;
+  //Recebe o tipo enum de PAGES (enum é como se fosse uma gaveta de constantes) e define a página inicial como HOME
+  currentPage: Pages = Pages.HOME;
 
   //Essa propriedade vai ser acessada para o html acessar os valores. Ex: pages.HOME
   pages = Pages;
@@ -92,8 +92,23 @@ export class AppComponent {
   }
    //estou passando o conteúdo dos destaques para ser alterado de forma dinâmica. O tipo SectionModel vem da pasta models
    
-
+  ngOnInit(): void {
+    //estou imprimindo apenas para ver a mudança do valor inicial, para o valor que será dado depois de apertar o botão la em contatos
+    console.log(this.appData.sectionContact);
+      
+  }
   goToPage(page: Pages): void{
     this.currentPage = page
+  }
+
+  //recebe o evento emitido do tipo SectionContact
+  handleSaveContactData(event: SectionContact): void{
+    console.log(event);
+    //Muda o conteúdo de sectionContact para o evento recebido
+    this.appData.sectionContact = event
+  }
+  messageContact(event: string): void{
+    console.log(event);
+    
   }
 }

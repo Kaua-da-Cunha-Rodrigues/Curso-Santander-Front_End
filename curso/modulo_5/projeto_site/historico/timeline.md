@@ -60,3 +60,11 @@
     Para puxar esses textos em seus devidos components, adicionei uma propriedade em app.component.html em cada chamada de componente, uma propriedade. Ex: em <app-home [homeData]="AppData.SectionFeatures">
     
      no ts de cada um (Ex: home.component.ts) um @input recebendo <nome-component>Data: <interface que define seu tipo> e em seu html, coloquei esse valor usando property-biding para chamar seus valores: Ex: em home, eu tenho o homeData. Para chamar o valor da propriedade título dele, eu uso {{ appData.title }} dentro do h1
+
+# Aula 4
+
+    Utilização de two-way-binding, Input e Output, OnInit, EventEmitter no componente contact
+
+    Exercício: Dados os componentes construídos em aula, pede-se para implementar uma função no AppComponent que receba de cada um dos componentes filhos a mensagem "Componente [Nome do componente filho] foi iniciado"
+
+    Ex 2: Exibir, no template do componente de Endereço, os dados recebidos do formulário do componente de contato, a medida em que o form é submetido

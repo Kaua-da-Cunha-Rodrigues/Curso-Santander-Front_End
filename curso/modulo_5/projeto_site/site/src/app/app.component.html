@@ -65,8 +65,11 @@
     [addressData]="appData.sectionAddress"
   ></app-address>
 
+  <!--o (saveDataEmitter) está enviando dados para o componente pai no método handleSaveContactData-->
   <app-contact 
     *ngIf="currentPage === 'CONTACT'"
+    (saveDataEmitter)="handleSaveContactData"
+    
     [contactData]="appData.sectionContact"
   ></app-contact>
 

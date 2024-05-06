@@ -3,29 +3,37 @@
     <section id="contact" class="my-5">
       <div class="container">
         <h1 class="text-center mb-4">Contato</h1>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label"
-            >Email</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="{{ contactData.email}}"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"
-            >Mensagem</label
-          >
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-            placeholder="{{contactData.message}}"
-          ></textarea>
-        </div>
-        <button class="btn btn-primary">Enviar</button>
+        <form action="">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Email</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="exemplo@gmail.com"
+              [(ngModel)]="contactData.email"
+              name="email"
+            />
+            <!-- [(ngModel é um two-way-binding, ou seja, envia dados do hmtl pro ts e do ts pro html ao mesmo tempo)], para utilizado tive que importar o FormsModule em app.module.ts-->
+            <!--Em resumo, se o dado for alterado no template envia pro ts, e se for mudado no ts envia pro html. Eles estão sincronizados-->
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Mensagem</label
+            >
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              placeholder="Olá, Mundo!"
+              [(ngModel)]="contactData.message"
+              name="message"
+            ></textarea>
+          </div>
+          <button class="btn btn-primary" (click)="saveData()">Enviar</button>
+        </form>
       </div>
     </section>
     <!-- End Contact -->
