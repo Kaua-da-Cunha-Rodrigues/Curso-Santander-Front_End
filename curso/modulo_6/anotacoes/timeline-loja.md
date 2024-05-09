@@ -11,3 +11,22 @@
     dentro de app.component.html foi adicionado o rout-outlet, que carrega a página daquela determinada rota. Ex: para carregar o componente product, a url da página deve ser "localhost:4200/products"
     
     criado o componente auth na pasta "auth" em "modules" e sua rota em "app.route.ts"
+
+    Instalei o bootstrap (npm i bootstrap) e o angular material (ng add @angular/material)
+
+    Em product, eu puxei um material do angular material para fazer o card e fiz suas importações em product.component.ts
+    Essse materiais são códigos prontos pra vc usar em angular
+
+    Estilizei os botões do card usando o material de buttons
+
+    Utilizei crudcrud com o thunder cliente para criar um produto sem ter uma aba para isso, e vou chamá-lo em product.ts
+
+    Puxei uma api do professor para servir como banco de dados, porém ainda não está funcionando
+
+    Substitui o conteúdo dos cards de estático para dinâmico utilizando property-binding
+
+    Transferi os cards de product.component.html e product.component.ts para o componente list
+
+    Adicionado um botão em list.component.html para mudar da rota de list para create
+
+    Utilização de OnDestroy em list para fazer a destruição de um observable
