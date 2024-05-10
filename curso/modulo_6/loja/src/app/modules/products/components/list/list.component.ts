@@ -58,11 +58,27 @@ export class ListComponent implements OnDestroy, OnInit{
       next: (response: Product[]) =>{
         this.products = response
       },
-      error: (err) => (console.log(err))
-     
+      error: (err) => {
+        (console.log(err))
+      }
     })
   }
 
+  onDelete(id: string): void{
+    //chama a função delete que envia um id, e depois de completado chama o getProducts para recarregar a lista
+    this.productsService
+    .deleteProduct(id) 
+    .pipe(first())
+    .subscribe({
+      complete: () =>{
+        this.getProducts()
+      },
+      error: (err) =>{
+        (console.log(err))
+      } 
+     
+    }) 
+  }
   //Executado quando o componente é destruído
   ngOnDestroy(): void {
     //Passos para encerrar o ngSubscribe

@@ -1,14 +1,13 @@
 <div class="container">
-    <!--Utilizamos o routerLink para navegar de uma rota a outra. Isso precisa do RouterModule em ts-->
-    <button routerLink="/products/create">Ir para o cadastro</button>
     <div class="row">
         <!--ngFor substitui o ngFor-->
         @for (product of products; track $index) {
         <div class="col-3">
             <mat-card class="example-card">
                 <mat-card-header>
-                    <div mat-card-avatar class="example-header-image"></div>
-                    <mat-card-title>{{ product.name}}</mat-card-title>
+                    <mat-card-title class="text-center">
+                        {{ product.name}}
+                    </mat-card-title>
                 </mat-card-header>
                 <img mat-card-image src="{{ product.image }}" alt="Photo do produto {{ product.name}}">
                 <mat-card-content>
@@ -20,7 +19,8 @@
                 </mat-card-content>
                 <mat-card-actions class="d-flex justify-content-end gap-2">
                     <button mat-flat-button color="primary">Editar</button>
-                    <button mat-stroked-button color="warn">Excluir</button>
+                    <!--O botão deletar chama a função onDelete que envia o id de product. Como no models ele é opcional, aqui ele deve ter o exclamação no final-->
+                    <button mat-stroked-button color="warn" (click)="onDelete(product.id!)">Excluir</button>
                 </mat-card-actions>
             </mat-card>
         </div>

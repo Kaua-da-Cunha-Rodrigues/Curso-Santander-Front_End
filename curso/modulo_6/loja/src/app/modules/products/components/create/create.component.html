@@ -1,1 +1,54 @@
-<p>create works!</p>
+<div class="container">
+    <h1 class="text-center">Cadastrar Produto</h1>
+    <!--Referencia esse formGroup com o ts e quando dá o submit, chama a função onSave-->
+    <form [formGroup]="form" (ngSubmit)="onSave()">
+
+        <div class="col-12 mb-3">
+            <mat-form-field appearance="outline">
+                <mat-label>Nome</mat-label>
+                <!--formControlName relaciona esse input ao formControl do TS (deve ter o mesmo nome)-->
+                <input matInput formControlName="name">
+                <mat-error>O campo é obrigatório</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-12 mb-3">
+            <mat-form-field appearance="outline">
+                <mat-label>Descrição</mat-label>
+                <input matInput formControlName="description">
+                <mat-error>O campo é obrigatório</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-12 mb-3">
+            <mat-form-field appearance="outline">
+                <mat-label>Preço</mat-label>
+                <input matInput formControlName="price">
+                <mat-error>O campo é obrigatório</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-12 mb-3">
+            <mat-form-field appearance="outline">
+                <mat-label>Quantidade</mat-label>
+                <input matInput formControlName="qty">
+                <mat-error>O campo é obrigatório</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-12 mb-3">
+            <mat-form-field appearance="outline">
+                <mat-label>Imagem</mat-label>
+                <input matInput formControlName="image">
+                <mat-error>O campo é obrigatório</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-12 mb-3">
+            <!--Desativa o botão enquanto os validators do form não forme cumpridos-->
+            <button mat-flat-button color="primary" [disabled]="form.invalid">
+                Salvar
+            </button>
+        </div>
+    </form>
+</div>

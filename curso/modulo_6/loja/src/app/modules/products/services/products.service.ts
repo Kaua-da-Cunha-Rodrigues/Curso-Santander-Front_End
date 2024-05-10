@@ -24,4 +24,16 @@ export class ProductsService {
     return this.http.get<Product[]>(this.apiUrl)
     
   }
+
+  //Ao invés de receber (get) ele vai enviar para o banco de dados o product (post). Ela não retorna nada, portanto observable void
+  saveProducts(product: Product): Observable<void>{
+    return this.http.post<void>(this.apiUrl, product)
+    
+  }
+
+  //Pra deletar produtos
+  deleteProduct(id: string): Observable<void>{
+    return this.http.delete<void>(`${this.apiUrl}/${id}`)
+    
+  }
 }

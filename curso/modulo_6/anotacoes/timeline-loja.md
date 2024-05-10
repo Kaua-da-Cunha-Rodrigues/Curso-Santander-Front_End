@@ -38,3 +38,33 @@
     Criei um environment que receberá a url de onde os dados geral da aplicação serão recebidos. Esse envinroment servirá para receber a lista de produtos, que será utilizada em cada componente a sua maneira
 
     Em app.config.ts eu adicionei o provideHttpClient para poder achar a rota http
+
+# Aula 3
+
+    criei uma pasta communs em app para guardar meu componente navbar (header)
+
+    peguei um angular material pra nav e em app.component.html chamei o componente header
+
+    Em create.component, fiz o seguinte:
+
+        Em TS, eu criei um formGroup para agrupar os formControls dos inputs do formulário, que são passados no método buildForm() e iniciado em OnInit
+
+        Criei o html do formulário usando material, e dentro de form adicionei o mesmo nome do formGroup que havia criado em TS
+
+        Os inputs possuem um formControlName que deve ser o mesmo dos formControl em TS para serem relacionados entre si
+
+        Ainda na tag form, adicionei o (ngSubmit) que chama a função onSave em TS assim que o formulário for enviado
+
+        A função onSave, inicialmente, só cria uma const product di tipo Product (model criado) que recebe os valores presentes nos inputs. Cria o produto de fato
+
+    Agora no service:
+
+        Criei um método chamado saveProduct() que sua função, será o de postar (post) o produto criado em create para o banco de dados, ou seja, armazenar esse produto cadastrado
+
+        O método recebe como parâmetro o produto que será enviado e não retorna nenhum valor (Observable = void)
+
+        Utilizando então o httpClient, eu dou um post que não retorna nada, enviando a url na qual eu desejo enviar, seguido do produto recebido. Então eu envio o endereço desejado e o produto enviado
+
+    Voltando para o create:
+
+        No TS, eu importo o service para utilizar o saveProduct e chamo o método enviando a const product criada anteriormente, dando pipe e mudando a rota da página para a listagem de produtos
