@@ -1,15 +1,15 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Observable, Subject, first, takeUntil } from 'rxjs';
 import { Product } from '../../models/product.model';
 import { RouterModule } from '@angular/router';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [RouterModule, MatCardModule, MatButtonModule, HttpClientModule],
+  imports: [RouterModule, MatCardModule, MatButtonModule],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
@@ -18,11 +18,11 @@ export class ListComponent implements OnDestroy, OnInit{
   protected ngUnsubscribe = new Subject()
 
   products?: Product[]
-  // apiUrl = https://localhost:3000/products"
-  apiUrl = "https://crudcrud.com/api/12c6ded592194e43b7f407dfc5ed0c15/products"
 
 
-  //esse código abaixo é apenas para demonstar que, quando você navega de um componente para outro usando rotas, os observables ainda funcionam, o que pode gerar gargalo no sistema caso tenham muitos observables que não estão sendo usados, mas continuam rodando
+  /*
+    esse código abaixo é apenas para demonstar que, quando você navega de um componente para outro usando rotas, os observables ainda funcionam, o que pode gerar gargalo no sistema caso tenham muitos observables que não estão sendo usados, mas continuam rodando
+  */
   observable = new Observable((observer) =>{
     let counter = 0
     setInterval(() =>{
@@ -31,19 +31,28 @@ export class ListComponent implements OnDestroy, OnInit{
     }, 1000)   
   })
 
-  constructor(private http: HttpClient){}
+  /*
+    puxa o service para obter a lista. Essa puxada é feita no constructor, pois é um elemento de muita urgência. Ele é puxado antes mesmo do OnInit
+  */
+  constructor(private productsService: ProductsService){}
 
-  //Executado uma só vez, qunado o componente é iniciado e após receber todos os dados de @input()
+  //Executado uma só vez, quando o componente é iniciado e após receber todos os dados de @input()
   ngOnInit(){
     this.getProducts() 
 
-    //o observable vai fazer a leitura até que o ngUnsubscribe der complete (encerrar), fazendo com que o observable acabe junto do componente, lá embaixo no método NgDestroy
+    /*
+      o observable vai fazer a leitura até que o ngUnsubscribe der complete (encerrar), fazendo com que o observable acabe junto do componente, lá embaixo no método NgDestroy
+    */
     this.observable.pipe(takeUntil(this.ngUnsubscribe)).subscribe((response) => console.log(response))
   }
 
-  //ele pega os produtos que foram armazenados lá no crudcrud e joga no atributo products, que recebe um array de produtos
+  /*
+    ele pega os produtos que foram armazenados lá no crudcrud e joga no atributo products, que recebe um array de produtos
+  */
   getProducts(): void{
-    this.http.get<Product[]>(this.apiUrl)
+    //chamo o método getProducts do service e  popula o this.products com os dados recebidos
+    this.productsService
+    .getProducts()
     .pipe(first())
     .subscribe({
       next: (response: Product[]) =>{
