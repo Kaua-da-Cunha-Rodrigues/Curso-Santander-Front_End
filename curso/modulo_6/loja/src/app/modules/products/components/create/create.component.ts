@@ -7,6 +7,7 @@ import { Product } from '../../models/product.model';
 import { ProductsService } from '../../services/products.service';
 import { first } from 'rxjs';
 import { Router } from '@angular/router';
+import { ResourceLoader } from '@angular/compiler';
 
 @Component({
   selector: 'app-create',
@@ -15,6 +16,7 @@ import { Router } from '@angular/router';
   templateUrl: './create.component.html',
   styleUrl: './create.component.css'
 })
+
 export class CreateComponent implements OnInit{
   //cria um form do tipo FormGroup, que deve receber seus controls (inputs)
   form!: FormGroup

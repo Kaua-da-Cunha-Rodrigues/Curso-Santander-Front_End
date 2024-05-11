@@ -16,6 +16,6 @@ mat-form-field{
     width: 90%;
 }
 mat-card img{
-    width: 200px;
-    height: 250px;
+    max-width: 200px;
+    max-height: 250px;
 }

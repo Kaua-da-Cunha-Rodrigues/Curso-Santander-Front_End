@@ -3,6 +3,8 @@ import { ProductsComponent } from './modules/products/products.component';
 import { AuthComponent } from './modules/auth/auth.component';
 import { CreateComponent } from './modules/products/components/create/create.component';
 import { ListComponent } from './modules/products/components/list/list.component';
+import { RegisterComponent } from './modules/auth/components/register/register.component';
+import { LoginComponent } from './modules/auth/components/login/login.component';
 
 export const routes: Routes = [
     //criação de uma rota para products
@@ -14,7 +16,17 @@ export const routes: Routes = [
     },
     {
         path: "auth",
-        component: AuthComponent
+        component: AuthComponent,
+        children:[
+            {
+                path: 'register',
+                component: RegisterComponent
+            },
+            {
+                path: 'login',
+                component: LoginComponent
+            }
+        ]
     },
     {
         path: 'products',

@@ -50,26 +50,30 @@
 <main id="main">
   
   <!--O homeData é um property binding e está passando o atributo sectionFeatures do componente pai (app) para o componente filho (home)-->
+  <!--Os "message" servem para enviar as informações pro app.component que determinado componente foi instanciado, ou seja, que foi carregado-->
   <app-home 
     *ngIf="currentPage === 'HOME'" 
+    (messageHomeEmitter)="initComponent($event)"
     [homeData]="appData.sectionFeatures"
   ></app-home>
 
   <app-about 
     *ngIf="currentPage === 'ABOUT'"
+    (messageAboutEmitter)="initComponent($event)"
     [aboutData]="appData.sectionAbout"
   ></app-about>
 
   <app-address 
     *ngIf="currentPage === 'ADDRESS'"
+    (messageAddressEmitter)="initComponent($event)"
     [addressData]="appData.sectionAddress"
   ></app-address>
 
   <!--o (saveDataEmitter) está enviando dados para o componente pai no método handleSaveContactData-->
   <app-contact 
     *ngIf="currentPage === 'CONTACT'"
-    (saveDataEmitter)="handleSaveContactData"
-    
+    (saveDataEmitter)="handleSaveContactData($event)"
+    (messageContactEmitter)="initComponent($event)"
     [contactData]="appData.sectionContact"
   ></app-contact>
 

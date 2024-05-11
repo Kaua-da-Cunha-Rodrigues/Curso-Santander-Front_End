@@ -65,12 +65,14 @@ export class ListComponent implements OnDestroy, OnInit{
   }
 
   onDelete(id: string): void{
+    
     //chama a função delete que envia um id, e depois de completado chama o getProducts para recarregar a lista
     this.productsService
     .deleteProduct(id) 
     .pipe(first())
     .subscribe({
       complete: () =>{
+        
         this.getProducts()
       },
       error: (err) =>{

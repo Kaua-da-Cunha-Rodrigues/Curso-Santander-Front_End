@@ -65,6 +65,8 @@
 
     Utilização de two-way-binding, Input e Output, OnInit, EventEmitter no componente contact
 
-    Exercício: Dados os componentes construídos em aula, pede-se para implementar uma função no AppComponent que receba de cada um dos componentes filhos a mensagem "Componente [Nome do componente filho] foi iniciado"
+    Exercício: Dados os componentes construídos em aula, pede-se para implementar uma função no AppComponent que receba de cada um dos componentes filhos a mensagem "Componente [Nome do componente filho] foi iniciado" - Feito
+
+        Para fazer isso, eu criei um output no ts de cada componente, que enviada um eventEmitter do tipo string. Para enviar esse evento, o componente precisava ser inicializado, então o emit desses eventos foi dado dentro de ngOnInit, descrevendo a mensagem. Após isso, eu fui na chamada de cada componente em app.component.html e criei um event-binding chamando os eventos onde eles iniciavam um método "initComponent" chamando um evento (Ex: (messageAddressEmitter)="initComponent($event)" ). Esse método fica dentro de app.component.ts e servirá apenas para receber o evento e imprimí-lo. 
 
     Ex 2: Exibir, no template do componente de Endereço, os dados recebidos do formulário do componente de contato, a medida em que o form é submetido

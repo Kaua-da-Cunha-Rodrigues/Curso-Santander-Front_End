@@ -101,14 +101,19 @@ export class AppComponent implements OnInit{
     this.currentPage = page
   }
 
-  //recebe o evento emitido do tipo SectionContact
+  //recebe o evento emitido do tipo SectionContact e mostra o valor depois de apertar o botão em contatos
   handleSaveContactData(event: SectionContact): void{
     console.log(event);
+
     //Muda o conteúdo de sectionContact para o evento recebido
     this.appData.sectionContact = event
   }
   messageContact(event: string): void{
-    console.log(event);
     
+    
+  }
+  //Ele recebe a mensagem de inicialização dos componentes e imprime a mensagem
+  initComponent(event: string): void {
+    console.log(event);
   }
 }
