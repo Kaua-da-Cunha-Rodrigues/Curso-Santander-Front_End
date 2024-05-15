@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { environment } from '../../../../environments/environment.development';
 
 
-//esse injectable faz com que você possa injetar esse service, e o 'root' permite puxar esse servide desde a raíz, ou seja, de qualquer lugar e qualquer raíz da árvore de componentes
+//esse injectable faz com que você possa injetar esse service, e o 'root' permite puxar esse service desde a raíz, ou seja, de qualquer lugar e qualquer raíz da árvore de componentes
 @Injectable({
   providedIn: 'root'
 })
@@ -25,9 +25,21 @@ export class ProductsService {
     
   }
 
+  //puxa o produto através do id que será usado para editar o produto já cadastrado
+  getProductById(id: string): Observable<Product>{
+    return this.http.get<Product>(`${this.apiUrl}/${id}`)
+    
+  }
+
   //Ao invés de receber (get) ele vai enviar para o banco de dados o product (post). Ela não retorna nada, portanto observable void
   saveProducts(product: Product): Observable<void>{
     return this.http.post<void>(this.apiUrl, product)
+    
+  }
+
+  updateProduct(id: string, product: Product): Observable<void>{
+    //Da um put para o update passando a rota e o produto
+    return this.http.put<void>(`${this.apiUrl}/${id}`, product)
     
   }
 

@@ -18,9 +18,11 @@
                     <p>Quantidade: {{ product.qty}}</p>
                 </mat-card-content>
                 <mat-card-actions class="d-flex justify-content-end gap-2">
-                    <button mat-flat-button color="primary">Editar</button>
-                    <!--O botão deletar chama a função onDelete que envia o id de product. Como no models ele é opcional, aqui ele deve ter o exclamação no final-->
-                    <button mat-stroked-button color="warn" (click)="onDelete(product.id!)">Excluir</button>
+
+                    <button mat-flat-button color="primary" (click)="editProduct(product.id!)">Editar</button>
+
+                    <!--O botão deletar chama a função openDialog que abre um modal para confirmação do delete do produto, enviando o id do mesmo-->
+                    <button mat-stroked-button color="warn" (click)="openDialog(product.id!)">Excluir</button>
                 </mat-card-actions>
             </mat-card>
         </div>

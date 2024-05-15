@@ -68,3 +68,22 @@
     Voltando para o create:
 
         No TS, eu importo o service para utilizar o saveProduct e chamo o método enviando a const product criada anteriormente, dando pipe e mudando a rota da página para a listagem de produtos
+
+    Criado a função de deletar produto em list.component.ts
+
+    
+    Para utilizar a API products-api sem ter a parte de login, precisa-se mudar a branch no terminal de products-api para "git checkout no-auth"
+
+    Componente modal criado para complementar a função de "excluir" em list.component. Esse componente serve para confirmar se deseja-se realmente excluir o produto
+
+    Basicamente, em list html no (click) do botão excluir, eu mudei a chamada da função para a abertura do modal. Essa função openDialog do modal faz o seguinte: ele abre o modal, e dependendo do botão clicado nele, ele retorna true ou false. Assim que o modal é fechado clicando no botão, ele chamará o método onDelete para de fato fazer a exclusão do produto.
+
+    Para editar o produto, utilizei o próprio componente de create para servir como form de modificação. Foi adicionado uma rota em app.route que abre o edit enviando o id do produto clicado, que está associado na listagem.
+
+    Assim que clicado no botão edit, ele manda para a rota criada para edição vinculando o id a ela
+
+    Em product.service criou-se um método para obter o produto a partir de seu id (getProductById)
+
+    Em create TS criei o getProduct que faz a chamada do service para obter o produto pelo id. Assim que ele pega o produto, ele substitui todos os valores de form, que é um formGroup com seus formControls e da um patchValue aos campos do form para que sejam associados os valores do produto puxado
+
+    O método onSave foi modificado, para que ele reconheça quando o botão de "Salvar" está sendo para criar de fato um produto ou editar seus valores já existentes, se dividindo em dois novos métodos: createProduct e updateProduct

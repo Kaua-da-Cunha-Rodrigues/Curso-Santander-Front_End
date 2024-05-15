@@ -41,6 +41,11 @@ export const routes: Routes = [
             {
                 path: '',
                 component: ListComponent
+            },
+            //:id pois significa que essa informação vai ser substituída depois, no caso pelo id
+            {
+                path: 'edit/:id',
+                component:CreateComponent
             }
         ]
     },
