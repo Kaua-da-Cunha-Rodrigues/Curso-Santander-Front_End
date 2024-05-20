@@ -1,44 +1,36 @@
 <div class="container">
-    <h1 class="text-center">Login</h1>
-    <!--Referencia esse formGroup com o ts e quando dá o submit, chama a função onSave-->
+    <h1 class="text-center">Login de Usuário</h1>
+
     <form [formGroup]="form" (ngSubmit)="login()">
 
         <div class="row mb-3">
-            <div class="col-4">
-                <mat-form-field appearance="outline">
-                    <mat-label>
-                        E-mail
-                    </mat-label>
-                    <!--formControlName relaciona esse input ao formControl do TS (deve ter o mesmo nome)-->
-                    <input matInput formControlName="email">
-                    <mat-error>
-                        O campo é obrigatório
-                    </mat-error>
+            <div class="col-md-4 offset-md-4"> <mat-form-field appearance="outline">
+                    <mat-label>E-mail</mat-label>
+                    <input matInput formControlName="email"> <mat-error>E-mail inválido</mat-error>
                 </mat-form-field>
             </div>
         </div>
 
         <div class="row mb-3">
-            <div class="col-4">
+            <div class="col-md-4 offset-md-4">
                 <mat-form-field appearance="outline">
-                    <mat-label>
-                        Senha
-                    </mat-label>
-                    <input type="password" matInput formControlName="senha">
-                    <mat-error>
-                        O campo é obrigatório
-                    </mat-error>
+                    <mat-label>Senha</mat-label>
+                    <input matInput formControlName="password">
+                    <mat-error>O campo é obrigatório</mat-error>
                 </mat-form-field>
             </div>
         </div>
 
         <div class="row mb-3">
-            <div class="col-4">
-                <!--Desativa o botão enquanto os validators do form não forme cumpridos-->
+            <div class="d-flex justify-content-between col-md-4 offset-md-4">
                 <button mat-flat-button color="primary" [disabled]="form.invalid">
-                    Entrar
+                    Salvar
                 </button>
+                <button mat-button routerLink="/auth/register">Cadastrar-se</button>
             </div>
+            
         </div>
+
     </form>
+
 </div>

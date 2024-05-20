@@ -87,3 +87,11 @@
     Em create TS criei o getProduct que faz a chamada do service para obter o produto pelo id. Assim que ele pega o produto, ele substitui todos os valores de form, que é um formGroup com seus formControls e da um patchValue aos campos do form para que sejam associados os valores do produto puxado
 
     O método onSave foi modificado, para que ele reconheça quando o botão de "Salvar" está sendo para criar de fato um produto ou editar seus valores já existentes, se dividindo em dois novos métodos: createProduct e updateProduct
+
+# Aula 4
+
+    Criada a parte de registrar usuário e login de usuário, recebendo token do banco de dados e fornecendo para as aplcações que necessitam do token, como o cadastrar produto
+
+    Uso de localStorage, HttpHeaders, criação de mais models em auth
+
+    Alteração no environment adicionado o token passado pelo login de usuário

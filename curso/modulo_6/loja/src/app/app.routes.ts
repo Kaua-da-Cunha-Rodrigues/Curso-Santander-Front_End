@@ -14,6 +14,7 @@ export const routes: Routes = [
         redirectTo: 'products',
         pathMatch: 'full'
     },
+    //criação de uma rota para autenticação
     {
         path: "auth",
         component: AuthComponent,
