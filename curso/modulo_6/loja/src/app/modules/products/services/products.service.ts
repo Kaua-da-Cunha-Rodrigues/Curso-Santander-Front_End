@@ -22,7 +22,7 @@ export class ProductsService {
   getProducts(): Observable<Product []>{
   
     //envia o token junto pro servidor
-    return this.http.get<Product[]>(this.apiUrl, this.setHeaders())
+    return this.http.get<Product[]>(this.apiUrl)
     
   }
 
@@ -30,7 +30,7 @@ export class ProductsService {
   getProductById(id: string): Observable<Product>{
 
      //envia o token junto pro servidor
-    return this.http.get<Product>(`${this.apiUrl}/${id}`, this.setHeaders())
+    return this.http.get<Product>(`${this.apiUrl}/${id}`)
     
   }
 
@@ -38,14 +38,14 @@ export class ProductsService {
   saveProducts(product: Product): Observable<void>{
 
      //envia o token junto pro servidor
-    return this.http.post<void>(this.apiUrl, product, this.setHeaders())
+    return this.http.post<void>(this.apiUrl, product)
     
   }
 
   updateProduct(id: string, product: Product): Observable<void>{
     //Da um put para o update passando a rota e o produto
      //envia o token junto pro servidor
-    return this.http.put<void>(`${this.apiUrl}/${id}`, product, this.setHeaders())
+    return this.http.put<void>(`${this.apiUrl}/${id}`, product)
     
   }
 
@@ -53,15 +53,17 @@ export class ProductsService {
   deleteProduct(id: string): Observable<void>{
 
      //envia o token junto pro servidor
-    return this.http.delete<void>(`${this.apiUrl}/${id}`, this.setHeaders())
+    return this.http.delete<void>(`${this.apiUrl}/${id}`)
     
   }
-  private setHeaders(){
-    //O token pode não existir, então ou ele é o Token_key ou então nada
-    const token = localStorage.getItem(environment.TOKEN_KEY) ?? ''
 
-    const headers: HttpHeaders = new HttpHeaders().set('Authorization', token)  
+  //Substituido pelo interceptor
+  // private setHeaders(){
+  //   //O token pode não existir, então ou ele é o Token_key ou então nada
+  //   const token = localStorage.getItem(environment.TOKEN_KEY) ?? ''
 
-    return { headers }
-  }
+  //   const headers: HttpHeaders = new HttpHeaders().set('Authorization', token)  
+
+  //   return { headers }
+  // }
 }

@@ -95,3 +95,13 @@
     Uso de localStorage, HttpHeaders, criação de mais models em auth
 
     Alteração no environment adicionado o token passado pelo login de usuário
+
+# Aula 5
+
+    Criei um interceptor, que serve para: ***
+
+    Comando pra criar: ng g interceptor <caminho-desejado>
+
+    Nesse interceptor, ele capta todas as requisições feitas para a api, e, para as reqs que exigem um token, ele envia o token
+
+    Criei um service em commons de loading, que servirá junto do interceptor loading, para capturar as requisições e enquanto ela estiver rodando na aplicação, aparece uma tela de loading para o usuário, que só sai quando todas as requisições forem finalizadas

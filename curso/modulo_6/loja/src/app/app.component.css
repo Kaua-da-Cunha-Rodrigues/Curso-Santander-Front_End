@@ -1,0 +1,15 @@
+.overlay{
+    /*cobre a página toda*/
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    /*Faz com que ele não "empurre" os outros elementos*/
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.25);
+    /*Mexe no eixo z para ele ficar na frente dos outros*/
+    z-index: 1000;
+    /*Centraliza*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
