@@ -3,26 +3,42 @@
     <span>Products Crud</span>
     <span class="spacer"></span>
 
-    <!--Utilizamos o routerLink para navegar de uma rota a outra. Isso precisa do RouterModule em ts-->
-    <button mat-button aria-label="Botão cadastrar produto" routerLink="/products/create">
-      Cadastrar
-    </button>
-    <button 
-        class="me-5"
-        mat-button 
-        aria-label="Botão Listar Produtos" 
-        routerLink="/products/"
-    >
-      Produtos
-    </button>
-
-    <button 
+    <!--
+      Desse modo é como se ele estivesse dando um subscribe para receber o Observable do método checkAauthStatus, porém fica bem mais enxuto dessa forma
+      O que ele faz é exibir ou não os botões dependendo do status de "logado" ou não do usuário
+    -->
+    @if(authService.checkAuthStatus() | async){
+      <!--Utilizamos o routerLink para navegar de uma rota a outra. Isso precisa do RouterModule em ts-->
+      <button mat-button aria-label="Botão cadastrar produto" routerLink="/products/create">
+        Cadastrar
+      </button>
+      <button 
+          class="me-5"
+          mat-button 
+          aria-label="Botão Listar Produtos" 
+          routerLink="/products/"
+      >
+        Produtos
+      </button>
+      <button 
+        mat-flat-button 
+        color="primary"
+        aria-label="Botão Logout" 
+        (click)="authService.logout()"
+      >
+      Logout
+      </button>
+    }@else{
+      <button 
         mat-flat-button 
         color="primary"
         aria-label="Botão Login" 
-        routerLink="/auth/login">
-    Login
-    </button>
+        routerLink="/auth/login"
+      >
+      Login
+      </button>
+
+    }
 
 </mat-toolbar>
   

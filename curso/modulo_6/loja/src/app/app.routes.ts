@@ -5,6 +5,7 @@ import { CreateComponent } from './modules/products/components/create/create.com
 import { ListComponent } from './modules/products/components/list/list.component';
 import { RegisterComponent } from './modules/auth/components/register/register.component';
 import { LoginComponent } from './modules/auth/components/login/login.component';
+import { authGuard } from './core/guards/auth.guard';
 
 export const routes: Routes = [
     //criação de uma rota para products
@@ -32,11 +33,14 @@ export const routes: Routes = [
     {
         path: 'products',
         component: ProductsComponent,
+        //Chama o guard, só permitindo que essa rota seja acessada se passar pelo guard. Isso servirá pra todas as suas rotas filhas
+        canActivate: [authGuard],
+
         //O children indica as rotas que são filhas de uma outra. Nesse caso, temos a rota filha 'create' da rota pai 'products', sendo carregada na url como products/create
         children:[
             {
                 path: 'create',
-                component: CreateComponent
+                component: CreateComponent,
             },
             //Como esse path não possui nada, ele é a rota padrão para a rota de products
             {

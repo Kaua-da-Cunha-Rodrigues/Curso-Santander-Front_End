@@ -78,3 +78,13 @@
           Dados do template para o Typescript (event binding). Ex: (click)
 
           Ou, ainda, combinando as duas formas anteriores (two-way-binding)
+
+# Aula 4
+
+     Início do crud
+
+     Criação do componente cadastrar-usuario
+     Montagem do model que receberá a tipagem do formulário de cadastro
+     Dentro de cadastro-usuario.ts foi criado o userForm com os formControls relacionados ao html (através do formControlName) para receber os dados pelo ts.
+     onSave é a função que é executada quando o formulário for enviado
+     Utilização de (ngSubmit), [disabled], (click), ngOnInit

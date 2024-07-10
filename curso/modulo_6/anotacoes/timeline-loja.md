@@ -105,3 +105,7 @@
     Nesse interceptor, ele capta todas as requisições feitas para a api, e, para as reqs que exigem um token, ele envia o token
 
     Criei um service em commons de loading, que servirá junto do interceptor loading, para capturar as requisições e enquanto ela estiver rodando na aplicação, aparece uma tela de loading para o usuário, que só sai quando todas as requisições forem finalizadas
+
+# Aula 6
+
+    
