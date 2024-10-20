@@ -1,0 +1,3 @@
+Este repositório contém os materiais e exemplos práticos do curso de Front-end do programa Santander Coders, desenvolvido em parceria com a Ada Tech. O curso aborda tecnologias fundamentais para o desenvolvimento de interfaces web, como HTML, CSS, JavaScript e frameworks modernos como Angular. O foco está em construir interfaces dinâmicas e interativas, aprimorando as habilidades de programação por meio de exercícios e projetos práticos.
+
+Aqui, você encontrará códigos e projetos que demonstram os conceitos principais ensinados no curso, proporcionando uma base sólida para quem deseja ingressar na carreira de desenvolvedor Front-end.
